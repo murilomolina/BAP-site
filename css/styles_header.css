@@ -1,0 +1,39 @@
+#logo-navbar {
+    height: fit-content;
+    max-height: min-content;
+}
+
+.nav-img {
+    width: 40px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link {
+    text-align: center;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.75); /* Azul translúcido */
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+    z-index: 10;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.hidden-navbar {
+    display: none; /* Oculta a navbar */
+}

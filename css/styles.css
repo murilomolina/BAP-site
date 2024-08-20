@@ -1,0 +1,108 @@
+body{
+    font: Arial, sans-serif;
+}
+.container{
+    padding-top: 2rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+    background-color: white;
+}
+.container.block{
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+}
+
+.carousel-container .titulo {
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+}
+.titulo{
+    color: darkblue;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+footer {
+    position: relative;
+    color: #000000;
+    padding: 20px;
+}
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; /* Garante que o pseudoelemento ocupe toda a largura do footer */
+    bottom: 0; /* Garante que o pseudoelemento ocupe toda a altura do footer */
+    /* background-image: url('/imgs/'); */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15; /* Ajuste a opacidade conforme necessário */
+}
+
+/* botao que contem logo/imagem presente no rodapé*/
+.footer-icon{
+    text-decoration: none;
+    transition: transform 1.0s ease, filter 1.0s ease;
+    width: 65%;
+}
+
+.footer-icon:hover img {
+    transform: scale(1.1); /* Aumenta o tamanho em 10% */
+    filter: brightness(1.5); /* Aumenta o brilho em 50% */
+}
+
+/* tipo de botão que contem um icon como os de rede sociais*/
+.icon {
+    transition: transform 0.3s ease;
+    height: 70px;
+}
+.icon#contato{
+    height: 100px;
+}
+.icon:hover {
+    transform: scale(1.1); /* Aumenta a imagem em 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+}
+.description {
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333; 
+    text-align: center;
+}
+
+/* tipo de botão que contem um texto*/
+.custom-button {
+    background-color: blue; /* Cor de fundo */
+    border: none; /* Remove a borda */
+    color: white; /* Cor do texto */
+    width: fit-content;
+    padding: 10px 30px; /* Espaçamento interno */
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Remove sublinhado do texto */
+    display: inline-block; /* Exibe o botão como um elemento inline */
+    font-size: 16px; /* Tamanho da fonte */
+    margin: 4px 2px; /* Margem externa */
+    cursor: pointer; /* Muda o cursor quando passa sobre o botão */
+    border-radius: 8px; /* Cantos arredondados */
+}
+
+.custom-button:hover {
+background-color: darkblue; /* Cor de fundo quando o cursor está sobre o botão */
+}
