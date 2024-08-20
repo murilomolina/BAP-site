@@ -1,6 +1,14 @@
 body{
     font: Arial, sans-serif;
 }
+h2 {
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
 .container{
     padding-top: 2rem;
     overflow: hidden;
@@ -12,6 +20,7 @@ body{
     background-color: white;
 }
 .container.block{
+    margin-top: 2rem;
     background-color: white;
     height: 100vh;
     width: 100vw;
@@ -28,12 +37,14 @@ body{
     font-weight: bold;
 }
 
-h2 {
-    margin-bottom: 1rem;
+.imagem-exibicao {
+    display: flex;
+    justify-content: center; 
+    align-items: start;    
 }
-
-p {
-    margin-bottom: 1rem;
+.imagem-exibicao img{ 
+    width: 100%;          
+    border-radius: 5px;
 }
 
 footer {
