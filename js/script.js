@@ -1,14 +1,14 @@
-document.addEventListener('scroll', function() {
+document.addEventListener('scroll', function() {    
     var targetContainer = document.getElementById('target-container');
     var navbar = document.querySelector('.navbar');
-    
-    // Verifica a posição do container em relação à janela de visualização
+    var navbarLogo = document.querySelector('.logo-navbar');
     var containerPosition = targetContainer.getBoundingClientRect();
 
-    // Se o topo do container estiver visível na janela de visualização
     if (containerPosition.top <= 0 && containerPosition.bottom >= 0) {
-        navbar.classList.add('hidden-navbar');
+        navbar.classList.add('full-navbar');
+        navbarLogo.classList.add('full-navbar-image');
     } else {
-        navbar.classList.remove('hidden-navbar');
+        navbar.classList.remove('full-navbar');
+        navbarLogo.classList.remove('full-navbar-image');
     }
 });

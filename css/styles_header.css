@@ -1,6 +1,6 @@
-#logo-navbar {
+.logo-navbar {
     height: fit-content;
-    max-height: min-content;
+    max-height: 100px;
 }
 
 .nav-img {
@@ -23,7 +23,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.75); /* Azul translúcido */
+    background: rgba(255, 255, 255, 0.8); /* Azul translúcido */
     padding-bottom: 0;
     margin-bottom: 0;
     border-bottom: none;
@@ -34,6 +34,9 @@
     border: none;
 }
 
-.hidden-navbar {
-    display: none; /* Oculta a navbar */
+.full-navbar {
+    background: rgba(255, 255, 255);
+}
+.full-navbar-image {
+    max-height: 50px; 
 }
