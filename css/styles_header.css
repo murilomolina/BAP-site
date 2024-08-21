@@ -20,9 +20,10 @@
 }
 
 .navbar {
+    overflow: hidden;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw; /*tentativa de não ter overflow horizontal*/
     background: rgba(255, 255, 255, 0.8); /* Azul translúcido */
     padding-bottom: 0;
     margin-bottom: 0;

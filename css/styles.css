@@ -1,4 +1,5 @@
 body{
+    overflow-x: hidden;
     font: Arial, sans-serif;
 }
 h2 {
@@ -9,6 +10,13 @@ p {
     margin-bottom: 1rem;
 }
 
+.text-container {
+    margin-top: 30px;
+    width: 100%; /* Adapta a largura ao elemento pai */
+    max-width: 100%; /* Garante que o conteúdo não ultrapasse o limite do pai */
+    padding: 1rem; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui o padding no tamanho total */
+}
 .container{
     padding-top: 2rem;
     overflow: hidden;
@@ -32,9 +40,12 @@ p {
     font-weight: bold;
 }
 .titulo{
-    color: darkblue;
     font-size: 4rem;
     font-weight: bold;
+}
+.carousel-container .subtitulo{
+    color: white;
+    font-size: 1.5rem;
 }
 
 .imagem-exibicao {
@@ -52,18 +63,19 @@ footer {
     color: #000000;
     padding: 20px;
 }
-footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0; /* Garante que o pseudoelemento ocupe toda a largura do footer */
-    bottom: 0; /* Garante que o pseudoelemento ocupe toda a altura do footer */
+/* para fazer com que tenha um background */
+/* footer::before { */
+    /* content: ""; */
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+    /* right: 0; Garante que o pseudoelemento ocupe toda a largura do footer */
+    /* bottom: 0; Garante que o pseudoelemento ocupe toda a altura do footer */
     /* background-image: url('/imgs/'); */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.15; /* Ajuste a opacidade conforme necessário */
-}
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* opacity: 0.15; Ajuste a opacidade conforme necessário */
+/* } */
 
 /* botao que contem logo/imagem presente no rodapé*/
 .footer-icon{
