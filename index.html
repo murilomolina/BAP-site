@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/styles_header.css">
     <link rel="stylesheet" href="/css/carrossel.css">
     <link rel="stylesheet" href="/css/responsividade.css">
+    <link rel="stylesheet" href="/css/card.css">
     <title>BAP</title>
 </head>
 
@@ -61,7 +62,7 @@
     </nav>
 
     <!-- bloco 1 Boas vindas -->
-    <div>
+    <div id="apresentacao">
         <div class="carousel-container col-md-12">
             <div class="swiper">
                 <div class="swiper-wrapper">
@@ -83,6 +84,7 @@
             </div>
         </div>
     </div>
+
     <div class="container" id="target-container">
         <!-- bloco 2 Sobre -->
         <div class="container block">
@@ -103,25 +105,66 @@
             <div class="row d-flex text-center titulo">
                 Onde encontrar?
             </div> 
-            <!-- <div class="carousel-container">
-                <div class="swiper">
+            <div class="carousel-container col-md-12 mt-5">
+                <div class="swiper-card">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" style="background-image: url('/imgs/artes/imagem-1.jpg');"></div>
-                        <div class="swiper-slide" style="background-image: url('/imgs/artes/imagem-2.jpg');"></div>
-                        <div class="swiper-slide" style="background-image: url('/imgs/artes/imagem-3.jpg');"></div>
+                        <div class="swiper-slide">
+                            <div class="bloco-imagem-texto" style="background-image: url('/imgs/artes/imagem-1.jpg');">
+                                <div class="conteudo-texto">
+                                    <h2>Título do Bloco 1</h2>
+                                    <p>Texto sobreposto para o bloco 1.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bloco-imagem-texto" style="background-image: url('/imgs/artes/imagem-2.jpg');">
+                                <div class="conteudo-texto">
+                                    <h2>Título do Bloco 2</h2>
+                                    <p>Texto sobreposto para o bloco 2.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bloco-imagem-texto" style="background-image: url('/imgs/artes/imagem-2.jpg');">
+                                <div class="conteudo-texto">
+                                    <h2>Título do Bloco 3</h2>
+                                    <p>Texto sobreposto para o bloco 3.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bloco-imagem-texto" style="background-image: url('/imgs/artes/imagem-2.jpg');">
+                                <div class="conteudo-texto">
+                                    <h2>Título do Bloco 4</h2>
+                                    <p>Texto sobreposto para o bloco 4.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bloco-imagem-texto" style="background-image: url('/imgs/artes/imagem-2.jpg');">
+                                <div class="conteudo-texto">
+                                    <h2>Título do Bloco 5</h2>
+                                    <p>Texto sobreposto para o bloco 5.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bloco-imagem-texto" style="background-image: url('/imgs/artes/imagem-2.jpg');">
+                                <div class="conteudo-texto">
+                                    <h2>Título do Bloco 6</h2>
+                                    <p>Texto sobreposto para o bloco 6.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Adicione botões de navegação ou paginação, se necessário -->
                     <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-                <div class="text-container">
-                    <h1 class="titulo">BARONE ASSESSORIA E PROJETOS</h1>
-                    <p class="subtitulo">Descrição da empresa em poucas palavras. <br>Exemplo: Sempre providenciando as melhores soluções para seu imóvel</p>
-                    <div class="row d-flex justify-content-center">
-                        <button class="custom-button toggle-btn" onclick="scrollToCont()">Conhecer mais</button>
+                    <div class="swiper-navigation">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                 </div>
-            </div>  -->
+            </div>
         </div>
         <!-- Bloco 4 -->
         <!-- <div class="container block"></div> -->
