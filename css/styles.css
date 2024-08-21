@@ -10,16 +10,9 @@ p {
     margin-bottom: 1rem;
 }
 
-.text-container {
-    margin-top: 30px;
-    width: 100%; /* Adapta a largura ao elemento pai */
-    max-width: 100%; /* Garante que o conteúdo não ultrapasse o limite do pai */
-    padding: 1rem; /* Espaçamento interno */
-    box-sizing: border-box; /* Inclui o padding no tamanho total */
-}
 .container{
     padding-top: 2rem;
-    overflow: hidden;
+    overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -28,9 +21,10 @@ p {
     background-color: white;
 }
 .container.block{
+    overflow-x: hidden;
     margin-top: 2rem;
     background-color: white;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
 }
 
@@ -63,6 +57,7 @@ footer {
     color: #000000;
     padding: 20px;
 }
+
 /* para fazer com que tenha um background */
 /* footer::before { */
     /* content: ""; */
