@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- importação do swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!--  -->
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/styles_header.css">
     <link rel="stylesheet" href="/css/carrossel.css">
@@ -14,10 +18,6 @@
 
 <body>
     <nav class="navbar justify-content-around px-0">
-        <button type="button" class="navbar-toggler me-3 d-none" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Botão de acesso a todas as páginas">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <a href="index.html" class="navbar-brand h1 mb-0 d-flex align-items-center">
             <img class="logo-navbar" src="/imgs/logo/BAP.jpg" alt="Logo" height="100">
             <div class="navbar-nav d-flex flex-row h5">
@@ -27,6 +27,10 @@
                 <a href="" class="nav-link px-3 d-none d-lg-block">Página 4</a>
             </div>
         </a>
+        <button type="button" class="navbar-toggler me-3 d-none" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Botão de acesso a todas as páginas">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div class="row col-12 h4 justify-content-around border-top mx-0 mt-1 mb-0">
             <div class="col-12 col-md-4">
@@ -57,16 +61,22 @@
     </nav>
 
     <!-- bloco 1 Boas vindas -->
-    <div class="container-block">
-        <div class="carousel-container">
-            <div class="carousel">
-                <div class="slide" style="background-image: url('/imgs/artes/imagem-1.jpg');"></div>
-                <div class="slide" style="background-image: url('/imgs/artes/imagem-2.jpg');"></div>
-                <div class="slide" style="background-image: url('/imgs/artes/imagem-3.jpg');"></div>
+    <div>
+        <div class="carousel-container col-md-12">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('/imgs/artes/imagem-1.jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('/imgs/artes/imagem-2.jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('/imgs/artes/imagem-3.jpg');"></div>
+                </div>
+                <!-- Adicione botões de navegação ou paginação, se necessário -->
+                <div class="swiper-pagination"></div>
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
             </div>
-            <div class="text-container">
+            <div class="text-container" id="target-text">
                 <h1 class="titulo">BARONE ASSESSORIA E PROJETOS</h1>
-                <p class="subtitulo">Descrição da empresa em poucas palavras.</p>
+                <p class="subtitulo">Descrição da empresa em poucas palavras. <br>Exemplo: Sempre providenciando as melhores soluções para seu imóvel</p>
                 <div class="row d-flex justify-content-center">
                     <button class="custom-button toggle-btn" onclick="scrollToCont()">Conhecer mais</button>
                 </div>
@@ -79,7 +89,7 @@
             <div class="row col-md-12">
                 <div class="col-md-8 order-md-1">
                     <h1 class="row titulo">Sobre nós</h1>
-                    <p class="row subtitulo">Aqui você explica como foi fundada, desde quando.........</p>
+                    <p class="row subtitulo">Aqui você explica como foi fundada, desde quando, quais serviços você presta.........</p>
                 </div>
                 <div class="col-md-4 order-md-2">
                     <div class="imagem-exibicao">
@@ -88,8 +98,31 @@
                 </div>
             </div>
         </div>
-        <!-- Bloco 3 quem somos/nossa equipe -->
-        <!-- <div class="container block"></div> -->
+        <!-- Bloco 3 onde encontrar -->
+        <div class="container block"> 
+            <div class="row d-flex text-center titulo">
+                Onde encontrar?
+            </div> 
+            <!-- <div class="carousel-container">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image: url('/imgs/artes/imagem-1.jpg');"></div>
+                        <div class="swiper-slide" style="background-image: url('/imgs/artes/imagem-2.jpg');"></div>
+                        <div class="swiper-slide" style="background-image: url('/imgs/artes/imagem-3.jpg');"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <div class="text-container">
+                    <h1 class="titulo">BARONE ASSESSORIA E PROJETOS</h1>
+                    <p class="subtitulo">Descrição da empresa em poucas palavras. <br>Exemplo: Sempre providenciando as melhores soluções para seu imóvel</p>
+                    <div class="row d-flex justify-content-center">
+                        <button class="custom-button toggle-btn" onclick="scrollToCont()">Conhecer mais</button>
+                    </div>
+                </div>
+            </div>  -->
+        </div>
         <!-- Bloco 4 -->
         <!-- <div class="container block"></div> -->
     </div>
