@@ -54,5 +54,5 @@
 
 .block .swiper-button-prev:hover,
 .swiper-button-next:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo mais escuro ao passar o mouse */
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo mais escuro ao passar o mouse */
 }

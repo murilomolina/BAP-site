@@ -14,7 +14,7 @@ document.addEventListener('scroll', function() {
 });
 
 // Função para verificar a largura da tela e ajustar a navbar
-function ajustarNavbar() {
+function ajustarParaPequenasTelas() {
     const navbarToggler = document.querySelector('.navbar-toggler');
     const prevBtnAppear = document.querySelector('.swiper-button-prev');
     const nextBtnAppear = document.querySelector('.swiper-button-next');
@@ -44,7 +44,7 @@ function ajustarNavbar() {
 }
 
 // Chama a função ao carregar a página
-document.addEventListener('DOMContentLoaded', ajustarNavbar);
+document.addEventListener('DOMContentLoaded', ajustarParaPequenasTelas);
 
 // Chama a função sempre que a janela for redimensionada
-window.addEventListener('resize', ajustarNavbar);
+window.addEventListener('resize', ajustarParaPequenasTelas);
