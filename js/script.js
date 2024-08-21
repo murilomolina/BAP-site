@@ -16,15 +16,30 @@ document.addEventListener('scroll', function() {
 // Função para verificar a largura da tela e ajustar a navbar
 function ajustarNavbar() {
     const navbarToggler = document.querySelector('.navbar-toggler');
+    const prevBtnAppear = document.querySelector('.swiper-button-prev');
+    const nextBtnAppear = document.querySelector('.swiper-button-next');
 
     if (window.innerWidth <= 992) {
         // Se a largura da tela for menor ou igual a 992px (tamanho lg no Bootstrap)
         navbarToggler.classList.remove('d-none');
         navbarToggler.classList.add('d-block');
+
+        prevBtnAppear.classList.remove('d-block');
+        prevBtnAppear.classList.add('d-none');
+
+        nextBtnAppear.classList.remove('d-block');
+        nextBtnAppear.classList.add('d-none');
+
     } else {
         // Se a largura da tela for maior que 992px (tamanho lg no Bootstrap)
         navbarToggler.classList.remove('d-block');
         navbarToggler.classList.add('d-none');
+
+        prevBtnAppear.classList.remove('d-none');
+        prevBtnAppear.classList.add('d-block');
+
+        nextBtnAppear.classList.remove('d-none');
+        nextBtnAppear.classList.add('d-block');
     }
 }
 
