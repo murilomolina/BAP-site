@@ -55,5 +55,12 @@
 
 .block .swiper-button-prev:hover,
 .swiper-button-next:hover {
-    background-color: rgba(0, 0, 0, 0.3); /* Fundo mais escuro ao passar o mouse */
+    transform: scale(1.2); /* Aumenta o tamanho do botão ao passar o mouse */
+    transition: transform 0.3s ease; /* Transição suave para o efeito de escala */
+}
+
+.block .swiper-button-prev::after,
+.block .swiper-button-next::after {
+    font-size: 20px; /* Aumenta o tamanho do ícone */
+    font-weight: bold;
 }
