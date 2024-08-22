@@ -3,8 +3,8 @@
     background-color: #fff;
     padding: 2rem;
     /* formatação para exibir sombra completa da box */
-    margin-right: 10px;
-    margin-left: 10px;
+    /* margin-right: 10px; */
+    /* margin-left: 10px; */
     /*  */
     border-radius: 20px;
     box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
