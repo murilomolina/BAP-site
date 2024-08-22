@@ -7,6 +7,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve inicial */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bloco-imagem-texto:hover {
+    transform: translateY(-10px); /* Eleva o bloco */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
 }
 
 .conteudo-texto {
@@ -15,6 +23,7 @@
     text-align: center;
     padding: 1rem;
     max-width: 80%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
     box-sizing: border-box;
 }

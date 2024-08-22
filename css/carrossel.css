@@ -29,6 +29,7 @@
 
 .swiper {
     position: relative;
+    overflow: hidden;
 }
 /* daqui pra baixo são configurações especiais para todos os carrosseis menos o da "apresentacao"*/
 .block .swiper-navigation {
