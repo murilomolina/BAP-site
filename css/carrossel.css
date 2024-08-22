@@ -51,6 +51,7 @@
     color: darkblue; /* Cor dos botões */
     border-radius: 10%; /* Botões arredondados */
     cursor: default;
+    z-index: 1;
 }
 
 .block .swiper-button-prev:hover,
