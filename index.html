@@ -18,6 +18,50 @@
 </head>
 
 <body>
+    <div class="modal fade" id="modalLogin" 
+    aria-labelledby="modalLogin" aria-hidden="true" >
+        <div class="modal-dialog">
+            <div class="modal-content">            
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">
+                        Login
+                    </h1>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="loginUsuarioInput" placeholder="">
+                                <label for="loginUsuarioInput">Usuario</label>
+                            </div>
+                        </div>
+            
+                        <div class="col-md-12">
+                            <div class="form-floating mb-3">                    
+                                <input type="text" class="form-control" id="loginSenhaInput" placeholder="">
+                                <label for="loginSenhaInput">Senha</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-md-12 mt-3">
+                        <div class="button">
+                            <div class="col-md-12 justify-content-center text-center">
+                                <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">
+                                        Cancelar
+                                </button>
+                                <button class="btn btn-primary" onclick="loginUsuario()"><!--ainda tem que criar o loginUsuario() no frontend.js-->
+                                    Logar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <nav class="navbar justify-content-around px-0">
         <a href="index.html" class="navbar-brand h1 mb-0 d-flex align-items-center">
             <img class="logo-navbar" src="/imgs/logo/BAP.jpg" alt="Logo" height="100">
@@ -26,6 +70,7 @@
                 <a href="" class="nav-link px-3 d-none d-lg-block">Página 2</a>
                 <a href="" class="nav-link px-3 d-none d-lg-block">Página 3</a>
                 <a href="" class="nav-link px-3 d-none d-lg-block">Página 4</a>
+                <a class="nav-link px-3 d-none d-lg-block"  data-bs-toggle="modal" data-bs-target="#modalLogin" href="p_logado.html">Login</a>
             </div>
         </a>
         <button type="button" class="navbar-toggler me-3 d-none" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -55,6 +100,7 @@
                         <a href="" class="nav-link me-auto">
                             <img src="/imgs" class="nav-img">
                             Página 4</a>
+                        <a class="nav-link me-auto" data-bs-toggle="modal" data-bs-target="#modalLogin" href="p_logado.html">Login</a>
                     </div>
                 </div>
             </div>
@@ -225,6 +271,7 @@
     <script src="/js/animacao.js"></script>
     <script src="/js/carrossel.js"></script>
     <script src="/js/script.js"></script>
+    <script src="/js/trataUsuarioFrontend.js"></script>
 </body>
 
 </html>
