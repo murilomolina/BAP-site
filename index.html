@@ -14,6 +14,16 @@
     <link rel="stylesheet" href="/css/carrossel.css">
     <link rel="stylesheet" href="/css/responsividade.css">
     <link rel="stylesheet" href="/css/card.css">
+    <link rel="stylesheet" href="/css/email.css">
+    <script> /*Script responsavel pelo e-mail*/
+        (function(){
+            emailjs.init("YOUR_USER_ID");   // Lembrar de substituir o place holder e
+                                            // 1: Crie uma Conta no EmailJS
+                                            // Vá para EmailJS e crie uma conta.
+                                            // Após o cadastro, crie um novo serviço de e-mail (Service ID).
+                                            // Crie um modelo de e-mail (Template ID). 
+        })();
+    </script>
     <title>BAP</title>
 </head>
 
@@ -212,7 +222,35 @@
             </div>
         </div>
         <!-- Bloco 4 -->
-        <!-- <div class="container block"></div> -->
+        <div class="container block">
+            <div class="row justify-content-around col-12">
+                <div class="titulo order-md-1 col-md-6">
+                    Ainda está com alguma dúvida?
+                </div> 
+                <div class="order-md-2 col-md-6">
+                    <div class="email-container">
+                        <h2>Nos mande um e-mail!</h2>
+                        <form id="emailForm">
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" name="name" required>
+                
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required>
+                
+                            <label for="message">Mensagem:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                
+                            <button class="custom-button" type="submit">Enviar</button>
+                        </form>
+                        <div id="thankYouMessage" style="display:none;">
+                            <h1>Obrigado pela sua mensagem!</h1>
+                            <p>Recebemos sua mensagem e entraremos em contato se necessário.</p>
+                            <p><a href="javascript:void(0);" onclick="resetForm()">Voltar</a></p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
     </div>
 
     <!-- Footer referencia -->
@@ -271,6 +309,7 @@
     <script src="/js/carrossel.js"></script>
     <script src="/js/script.js"></script>
     <script src="/js/trataUsuarioFrontend.js"></script>
+    <script src="/js/email.js"></script>
 </body>
 
 </html>

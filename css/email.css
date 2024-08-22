@@ -1,0 +1,34 @@
+/* Trecho que desenvolve o bloco de email */
+.email-container {
+    background-color: #fff;
+    padding: 2rem;
+    /* formatação para exibir sombra completa da box */
+    margin-right: 10px;
+    margin-left: 10px;
+    /*  */
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.email-container h2 {
+    margin-bottom: 20px;
+}
+
+.email-container label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+}
+
+.email-container input,
+.email-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
