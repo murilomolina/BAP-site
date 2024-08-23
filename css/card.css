@@ -23,7 +23,16 @@
     text-align: center;
     padding: 1rem;
     max-width: 80%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 20px;
     box-sizing: border-box;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.bloco-imagem-texto:hover .conteudo-texto {
+    opacity: 0;
+    visibility: hidden;
 }
