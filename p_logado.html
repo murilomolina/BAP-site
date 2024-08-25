@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/styles_header.css">
+    <link rel="stylesheet" href="/css/styles_nav.css">
     <link rel="stylesheet" href="/css/carrossel.css">
     <link rel="stylesheet" href="/css/responsividade.css">
     <title>BAP-funcionarios</title>
@@ -53,32 +53,52 @@
         </div>
     </div>
     <nav class="navbar justify-content-around px-0">
+        <a href="index.html" class="navbar-brand h1 mb-0 d-flex align-items-center">
+            <img class="logo-navbar" src="/imgs/logo/BAP.jpg" alt="Logo" height="100">
+            <div class="navbar-nav d-flex flex-row h5">
+                <a href="" class="nav-link px-3 d-none d-lg-block">Página 1</a>
+                <a href="" class="nav-link px-3 d-none d-lg-block">Página 2</a>
+                <a href="" class="nav-link px-3 d-none d-lg-block">Fale Conosco</a>
+                <a href="/p_logado.html" class="nav-link px-3 d-none d-lg-block">Página 4</a>
+                <a class="nav-link px-3 d-none d-lg-block"  data-bs-toggle="modal" data-bs-target="#modalCadastro" href="p_logado.html">Novo Usuario</a>
+            </div>
+        </a>
         <button type="button" class="navbar-toggler me-3 d-none" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Botão de acesso a todas as páginas">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a href="index.html" class="navbar-brand h1 mb-0 d-flex align-items-center">
-            <img src="/imgs/logo/BAP.jpg" alt="Logo" height="100">
-            <div class="navbar-nav d-flex flex-row h5">
-                <a href="index.html" class="nav-link px-3 d-none d-lg-block">Home</a>
-                <a class="nav-link active me-2" data-bs-toggle="modal" data-bs-target="#modalCadastro" href="#">
-                    Novo usuário
-                </a>
-            </div>
-        </a>
 
         <div class="row col-12 h4 justify-content-around border-top mx-0 mt-1 mb-0">
             <div class="col-12 col-md-4">
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="navbar-nav">
-                        <a href="index.html" class="nav-link me-auto">
-                            <img src="/imgs/icons/home.png" class="nav-img">
-                            Home Page</a>
+                        <a href="" class="nav-link me-auto">
+                            <img src="/imgs" class="nav-img">
+                            Página 1</a>
+                        <a href="" class="nav-link me-auto">
+                            <img src="/imgs" class="nav-img">
+                            Página 2</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-nav">
+                        <a href="" class="nav-link me-auto">
+                            <img src="/imgs" class="nav-img">
+                            Fale Conosco</a>
+                        <a href="" class="nav-link me-auto">
+                            <img src="/imgs" class="nav-img">
+                            Página 4</a>
+                        <a class="nav-link active me-2" data-bs-toggle="modal" data-bs-target="#modalCadastro" href="#">
+                            Novo usuário
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
+        
     <!-- links para utilização do bootstrap / com o Popper -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>

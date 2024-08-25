@@ -90,11 +90,10 @@ footer {
     height: 70px;
 }
 .icon#contato{
-    height: 100px;
+    height: 80px;
 }
 .icon:hover {
-    transform: scale(1.1); /* Aumenta a imagem em 10% */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+    transform: scale(1.2); /* Aumenta a imagem em 10% */
 }
 .description {
     align-items: center;
