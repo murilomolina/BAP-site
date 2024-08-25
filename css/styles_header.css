@@ -1,43 +1,7 @@
-.logo-navbar {
-    height: fit-content;
-    max-height: 100px;
-}
-
-.nav-img {
-    width: 40px;
-    height: auto;
-    margin-right: 5px;
-}
-
-.nav-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-link {
-    text-align: center;
-}
-
-.navbar {
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100vw; /*tentativa de não ter overflow horizontal*/
-    background: rgba(255, 255, 255, 0.8); /* Azul translúcido */
-    padding-bottom: 0;
-    margin-bottom: 0;
-    border-bottom: none;
-    z-index: 10;
-}
-
-.navbar-toggler {
-    border: none;
-}
-
-.full-navbar {
-    background: rgba(255, 255, 255);
-}
-.full-navbar-image {
-    max-height: 50px; 
+header{
+    margin-top: 75px;
+    bottom: 0;
+    padding: 25px;
+    background-color: rgb(0, 0, 140);
+    color: white;
 }
