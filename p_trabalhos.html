@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- importação do swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!--  -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles_nav.css">
+    <link rel="stylesheet" href="/css/carrossel.css">
+    <link rel="stylesheet" href="/css/responsividade.css">
+    <link rel="stylesheet" href="/css/card.css">
+    <title>trabalhos</title>
+</head>
+
+<body>
+    <div class="modal fade" id="modalLogin" aria-labelledby="modalLogin" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">
+                        Login
+                    </h1>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="loginUsuarioInput" placeholder="">
+                                <label for="loginUsuarioInput">Usuario</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="loginSenhaInput" placeholder="">
+                                <label for="loginSenhaInput">Senha</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-md-12 mt-3">
+                        <div class="button">
+                            <div class="col-md-12 justify-content-center text-center">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                    Cancelar
+                                </button>
+                                <button class="btn btn-primary"
+                                    onclick="loginUsuario()"><!--ainda tem que criar o loginUsuario() no frontend.js-->
+                                    Logar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar justify-content-around px-0">
+        <a href="index.html" class="navbar-brand h1 mb-0 d-flex align-items-center">
+            <img class="logo-navbar" src="/imgs/logo/BAP.jpg" alt="Logo" height="100">
+            <div class="navbar-nav d-flex flex-row h5">
+                <a href="index.html" class="nav-link px-3 d-none d-lg-block">Home</a>
+                <a href="" class="nav-link px-3 d-none d-lg-block">Página 1</a>
+                <a href="" class="nav-link px-3 d-none d-lg-block">Página 2</a>
+                <a href="/p_contato.html" class="nav-link px-3 d-none d-lg-block">Fale Conosco</a>
+                <a href="/p_logado.html" class="nav-link px-3 d-none d-lg-block">Página 4</a>
+                <a class="nav-link px-3 d-none d-lg-block"  data-bs-toggle="modal" data-bs-target="#modalLogin" href="p_logado.html">Login</a>
+            </div>
+        </a>
+        <button type="button" class="navbar-toggler me-3 d-none" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Botão de acesso a todas as páginas">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="row col-12 h4 justify-content-around border-top mx-0 mt-1 mb-0">
+            <div class="col-12 col-md-4">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-nav">
+                        <a href="" class="nav-link me-auto">
+                            <img src="/imgs/icons/home.png" class="nav-img">
+                            Home</a>
+                        <a href="" class="nav-link me-auto">
+                            <img src="/imgs/icons/localizacao.png" class="nav-img">
+                            Página 1</a>
+                        <a href="" class="nav-link me-auto">
+                            <img src="/imgs/icons/sistema_3.png" class="nav-img">
+                            Página 2</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-nav">
+                        <a href="/p_contato.html" class="nav-link me-auto">
+                            <img src="/imgs/icons/contato.png" class="nav-img">
+                            Fale Conosco</a>
+                        <a href="" class="nav-link me-auto">
+                            <img src="/imgs/icons/sistema_2.png" class="nav-img">
+                            Página 4</a>
+                        <a class="nav-link me-auto" data-bs-toggle="modal" data-bs-target="#modalLogin" href="p_logado.html">
+                            <img src="/imgs/icons/login.png" class="nav-img">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container block"> 
+        <div class="row text-center titulo">
+            PÁGINA EM MANUTENÇÃO
+        </div> 
+        <div class="carousel-container col-md-12">
+            <div class="swiper-card">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="bloco-imagem-texto" style="background-image: url('/imgs/obras/coop_Dom_Pedro_unidade_2/COOP\ DOM\ PEDRO\ I_UNIDADE\ 2_FOTO\ 4.jpg');">
+                            <div class="conteudo-texto">
+                                <h2>Coop unidade 2</h2>
+                                <p>Avenida Dom Pedro<br>Santo André, SP</p>
+                            </div>
+                            <a class="custom-button-carrossel mt-auto mx-auto" href="/p_trabalhos.html">
+                                Veja mais!
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bloco-imagem-texto" style="background-image: url('/imgs/obras/coop_Drogaria_carijos/DROGARIA_COOP_CARIJOS_4.jpg');">
+                            <div class="conteudo-texto">
+                                <h2>Coop Drogaria</h2>
+                                <p>Avenida Carijós<br>Santo André, SP</p>
+                            </div>
+                            <a class="custom-button-carrossel mt-auto mx-auto" href="/p_trabalhos.html">
+                                Veja mais!
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bloco-imagem-texto" style="background-image: url('/imgs/obras/Gal_Flores/COND\ CAMPO\ DI\ FIORE\ RUA\ GAL\ FLORES_2.jpg');">
+                            <div class="conteudo-texto">
+                                <h2>Condominio Campo Di Fiore</h2>
+                                <p>Rua Coronel Flores<br>Santo André, SP</p>
+                            </div>
+                            <a class="custom-button-carrossel mt-auto mx-auto" href="/p_trabalhos.html">
+                                Veja mais!
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bloco-imagem-texto" style="background-image: url('/imgs/obras/galpao_av_dr_erasmo/GALPAO_AV_DR_ERASMO_1.jpg');">
+                            <div class="conteudo-texto">
+                                <h2>Galpão</h2>
+                                <p>Avenida Dr. Erasmo<br>Santo André, SP</p>
+                            </div>
+                            <a class="custom-button-carrossel mt-auto mx-auto" href="/p_trabalhos.html">
+                                Veja mais!
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bloco-imagem-texto" style="background-image: url('/imgs/obras/horti_fruti_dionisio/HORTI_FRUTI_DIONISIO_1.jpg');">
+                            <div class="conteudo-texto">
+                                <h2>Horti Fruti</h2>
+                                <p>Santo André, SP</p>
+                            </div>
+                            <a class="custom-button-carrossel mt-auto mx-auto" href="/p_trabalhos.html">
+                                Veja mais!
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bloco-imagem-texto" style="background-image: url('/imgs/obras/r_caneleiras_esq_figueiras/RUA\ DAS\ CANELEIRA\ ESQ\ R\ FIGUEIRAS\ 1.jpg');">
+                            <div class="conteudo-texto">
+                                <h2>Caneleiras Esquina Figueiras</h2>
+                                <p>Rua das caneleiras Esquina Rua das Figueiras<br>Santo André, SP</p>
+                            </div>
+                            <a class="custom-button-carrossel mt-auto mx-auto" href="/p_trabalhos.html">
+                                Veja mais!
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bloco-imagem-texto" style="background-image: url('/imgs/obras/red_house_international_school/RED\ HOUSE\ INTERNATIONAL\ SCHOOL_1.jpg');">
+                            <div class="conteudo-texto">
+                                <h2>Red House International School</h2>
+                                <p>R. das Goiabeiras, 737<br>Santo André, SP</p>
+                            </div>
+                            <a class="custom-button-carrossel mt-auto mx-auto" href="/p_trabalhos.html">
+                                Veja mais!
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bloco-imagem-texto" style="background-image: url('/imgs/obras/reforma_salao_elisa_flaquer/REFORMA\ SALAO\ RUA\ ELISA\ FLAQUER_1.jpg');">
+                            <div class="conteudo-texto">
+                                <h2>Reforma Salão</h2>
+                                <p>Rua Elisa Flaquer<br>Santo André, SP</p>
+                            </div>
+                            <a class="custom-button-carrossel mt-auto mx-auto" href="/p_trabalhos.html">
+                                Veja mais!
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bloco-imagem-texto" style="background-image: url('/imgs/obras/salao_comercial_av_guaianases/SALAO_COMERCIAL_AV_GUAIANASES_7.jpg');">
+                            <div class="conteudo-texto">
+                                <h2>Salão Comercial</h2>
+                                <p>Avenida Guaianazes<br>Santo André, SP</p>
+                            </div>
+                            <a class="custom-button-carrossel mt-auto mx-auto" href="/p_trabalhos.html">
+                                Veja mais!
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bloco-imagem-texto" style="background-image: url('/imgs/obras/unidade_3_casa_da_esperanca_r_joaquim_tavora/UNIDADE\ 3\ CASA\ DA\ ESPERANÇA\ JOAQUIM\ TAVORA_9.jpg');">
+                            <div class="conteudo-texto">
+                                <h2>Unidade 3 Casa da Esperança</h2>
+                                <p>Rua Joaquim Tavora<br>Santo André, SP</p>
+                            </div>
+                            <a class="custom-button-carrossel mt-auto mx-auto" href="/p_trabalhos.html">
+                                Veja mais!
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bloco-imagem-texto" style="background-image: url('/imgs/obras/salao_comercial_r_teixeira_de_freitas/SALÂO\ COMERCIAL\ RUA\ TEIXEIRA\ DE\ FREITAS\ 4.jpg');">
+                            <div class="conteudo-texto">
+                                <h2>Salão Comercial</h2>
+                                <p>Rua Teixeira de Freitas<br>Santo André, SP</p>
+                            </div>
+                            <a class="custom-button-carrossel mt-auto mx-auto" href="/p_trabalhos.html">
+                                Veja mais!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Adicione botões de navegação ou paginação, se necessário -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-navigation">
+                    <div class="swiper-button-prev d-block"></div>
+                    <div class="swiper-button-next d-block"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="row justify-content-around">
+            <div class="col-12 col-md-4 text-center borda-footer">
+                <img src="/imgs/logo/BAP.jpg" alt="Logo" class="footer-logo">
+                <p class="mb-4">&copy; Barone Assessoria e Projetos</p>
+            </div>
+            <div class="col-12 col-md-5 text-center borda-footer">
+                <h2 class="mb-4">Nossas Informações</h2>
+                <h5 class="mb-3">barone@terra.com</h5>
+                <h5 class="mb-3">Avenida Portugal, 337 sala 406 - Centro - Santo André, SP</h5>
+                <h5>(11)999491165</h5>
+            </div>
+            <div class="col-12 col-md-3 text-center">
+                <!-- <h2 class="mb-4">Nossas Redes Sociais</h2> -->
+                <div class="row justify-content-center">
+                    <div class="col-md-4 justify-content-center">
+                        <a class="footer-icon" href="https://www.instagram.com" target="_blank">
+                            <img src="/imgs/icons/instagram.png" alt="instagram icon" width="75px">
+                        </a>
+                        <p class="description">@BAP</p> 
+                        <a class="footer-icon" href="https://www.facebook.com" target="_blank">
+                            <img src="/imgs/icons/facebook.png" alt="facebook icon" width="75px">
+                        </a>
+                        <p class="description">@BAP</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- links para utilização do bootstrap / com o Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <!-- js -->
+    <script src="/js/animacao.js"></script>
+    <script src="/js/carrossel.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/trataUsuarioFrontend.js"></script>
+    <script src="/js/email.js"></script>
+
+
+</body>
+</html>

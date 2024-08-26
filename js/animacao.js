@@ -12,11 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Adiciona um evento de clique para cada bloco
         blocos.forEach(function (bloco) {
-            bloco.addEventListener('click', function (event) {
-                // Evita que o clique no texto evite que o evento no bloco seja acionado
-                if (event.target !== bloco) return;
-
+            bloco.addEventListener('click', function () {
                 const conteudo = bloco.querySelector('.conteudo-texto');
+                const botao = bloco.querySelector('.custom-button-carrossel');
+
                 if (conteudo.style.opacity === '0' || conteudo.style.visibility === 'hidden') {
                     conteudo.style.opacity = '1';
                     conteudo.style.visibility = 'visible';
@@ -24,15 +23,34 @@ document.addEventListener("DOMContentLoaded", function () {
                     conteudo.style.opacity = '0';
                     conteudo.style.visibility = 'hidden';
                 }
+
+                if (botao.style.opacity === '1' || botao.style.visibility === 'visible') {
+                    botao.style.opacity = '0';
+                    botao.style.visibility = 'hidden';
+                } else {
+                    botao.style.opacity = '1';
+                    botao.style.visibility = 'visible';
+                }
             });
-            // Adiciona um evento de clique para o próprio texto, permitindo alternar a visibilidade
-            const textos = document.querySelectorAll('.conteudo-texto');
-            textos.forEach(function (texto) {
-                texto.addEventListener('click', function (event) {
-                    event.stopPropagation(); // Impede que o clique no texto oculte o texto novamente
-                    texto.style.opacity = '0';
-                    texto.style.visibility = 'hidden';
-                });
+        });
+
+        // Adiciona um evento de clique para o próprio texto, permitindo alternar a visibilidade
+        const textos = document.querySelectorAll('.conteudo-texto');
+        textos.forEach(function (texto) {
+            texto.addEventListener('click', function (event) {
+                event.stopPropagation(); // Impede que o clique no texto oculte o texto novamente
+                texto.style.opacity = '0';
+                texto.style.visibility = 'hidden';
+            });
+        });
+
+        // Adiciona um evento de clique para os botões, permitindo alternar a visibilidade
+        const botoes = document.querySelectorAll('.custom-button-carrossel');
+        botoes.forEach(function (botao) {
+            botao.addEventListener('click', function (event) {
+                event.stopPropagation(); // Impede que o clique no botão oculte o botão novamente
+                botao.style.opacity = '0';
+                botao.style.visibility = 'hodden';
             });
         });
     }
