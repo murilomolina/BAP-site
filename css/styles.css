@@ -45,9 +45,10 @@ p {
 .container.block{
     overflow-x: hidden;
     overflow: hidden;
+    display: flex;
     margin-top: 2rem;
     background-color: white;
-    max-height: 100vh;
+    max-height: auto;
     width: 100vw;
 }
 
