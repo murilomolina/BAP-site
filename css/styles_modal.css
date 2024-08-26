@@ -1,0 +1,30 @@
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* Ajuste a altura conforme necessário */
+    border-radius: 20px;
+}
+.block .swiper-navigation {
+    color: darkblue;
+    display: flex;
+    justify-content: center; /* Distribui os elementos igualmente */
+    align-items: center; /* Centraliza verticalmente a paginação */
+    margin-top: 20px; /* Espaçamento acima dos botões */
+}
+.swiper-pagination{
+    position: static; /* Remove a posição absoluta padrão */
+    color: darkblue; /* Cor dos botões */
+    cursor: default; 
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do botão ao passar o mouse */
+    transition: transform 0.3s ease; /* Transição suave para o efeito de escala */
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 50px; /* Aumenta o tamanho do ícone */
+    font-weight: bold;
+}
