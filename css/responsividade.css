@@ -1,3 +1,25 @@
+html {
+    font-size: 16px; /* Tamanho base, 1rem = 16px */
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+}
+
 /* footer */
 @media (min-width: 768px) {
     .borda-footer {
