@@ -129,5 +129,5 @@ background-color: darkblue; /* Cor de fundo quando o cursor está sobre o botão
 /*divisão de telas*/
 .divisor{
     width: 100vw; 
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgb(0, 0, 139, 0.1);
 }
