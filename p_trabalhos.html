@@ -62,11 +62,10 @@
         <a href="index.html" class="navbar-brand h1 mb-0 d-flex align-items-center">
             <img class="logo-navbar" src="/imgs/logo/BAP.jpg" alt="Logo" height="100">
             <div class="navbar-nav d-flex flex-row h5">
-                <a href="index.html" class="nav-link px-3 d-none d-lg-block">Home</a>
-                <a href="" class="nav-link px-3 d-none d-lg-block">Página 1</a>
+                <!-- <a href="" class="nav-link px-3 d-none d-lg-block">Página 1</a> -->
                 <a href="/p_trabalhos.html" class="nav-link px-3 d-none d-lg-block">Trabalhos</a>
                 <a href="/p_contato.html" class="nav-link px-3 d-none d-lg-block">Fale Conosco</a>
-                <a href="/p_logado.html" class="nav-link px-3 d-none d-lg-block">Página 4</a>
+                <a href="/p_logado.html" class="nav-link px-3 d-none d-lg-block">Página logado</a>
                 <a class="nav-link px-3 d-none d-lg-block"  data-bs-toggle="modal" data-bs-target="#modalLogin" href="p_logado.html">Login</a>
             </div>
         </a>
@@ -80,26 +79,20 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="navbar-nav">
                         <a href="" class="nav-link me-auto">
-                            <img src="/imgs/icons/home.png" class="nav-img">
-                            Home</a>
-                        <a href="" class="nav-link me-auto">
-                            <img src="/imgs/icons/localizacao.png" class="nav-img">
-                            Página 1</a>
-                        <a href="/p_trabalhos.html" class="nav-link me-auto">
                             <img src="/imgs/icons/sistema_2.png" class="nav-img">
                             Trabalhos</a>
+                        <a href="/p_contato.html" class="nav-link me-auto">
+                            <img src="/imgs/icons/contato.png" class="nav-img">
+                            Fale Conosco</a>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="navbar-nav">
-                        <a href="/p_contato.html" class="nav-link me-auto">
-                            <img src="/imgs/icons/contato.png" class="nav-img">
-                            Fale Conosco</a>
-                        <a href="" class="nav-link me-auto">
-                            <img src="/imgs/icons/sistema_2.png" class="nav-img">
-                            Página 4</a>
+                        <a href="/p_logado.html" class="nav-link me-auto">
+                            <img src="/imgs/icons/sistema_3.png" class="nav-img">
+                            Página logado</a>
                         <a class="nav-link me-auto" data-bs-toggle="modal" data-bs-target="#modalLogin" href="p_logado.html">
                             <img src="/imgs/icons/login.png" class="nav-img">Login</a>
                     </div>
@@ -120,8 +113,7 @@
                     <p class="row subtitulo">Aqui voce explica qual serviço voce prestou, onde foi consturida, como,
                         terceiros...</p>
                     <button class="custom-button"
-                        onclick="openModal(['/imgs/obras/coop_Dom_Pedro_unidade_2/COOP DOM PEDRO I_UNIDADE 2_FOTO 1.jpg', '/imgs/obras/coop_Dom_Pedro_unidade_2/COOP DOM PEDRO I_UNIDADE 2_FOTO 2.jpg', '/imgs/obras/coop_Dom_Pedro_unidade_2/COOP DOM PEDRO I_UNIDADE 2_FOTO 3.jpg'])">Abrir
-                        Carrossel 1</button>
+                        onclick="openModal(['/imgs/obras/coop_Dom_Pedro_unidade_2/COOP DOM PEDRO I_UNIDADE 2_FOTO 1.jpg', '/imgs/obras/coop_Dom_Pedro_unidade_2/COOP DOM PEDRO I_UNIDADE 2_FOTO 2.jpg', '/imgs/obras/coop_Dom_Pedro_unidade_2/COOP DOM PEDRO I_UNIDADE 2_FOTO 3.jpg'])">Mais imagens</button>
                 </div>
                 <div class="col-md-4 order-md-2">
                     <div class="imagem-exibicao">
@@ -132,8 +124,8 @@
             </div>
         </div>
     </div>
-    <div class="divisor">
-        <div class="container" id="servico-2">
+    <div class="divisor" id="servico-2">
+        <div class="container">
             <div class="container block">
                 <div class="row col-12 justify-content-around">
                     <div class="col-md-7 order-md-2">
@@ -141,8 +133,7 @@
                         <p class="row subtitulo">Aqui voce explica qual serviço voce prestou, onde foi consturida, como,
                             terceiros...</p>
                         <button class="custom-button"
-                            onclick="openModal(['/imgs/escritorio.jpg', '/imgs/escritorio.jpg', '/imgs/escritorio.jpg'])">Abrir
-                            Carrossel 1</button>
+                            onclick="openModal(['/imgs/obras/coop_Drogaria_carijos/DROGARIA_COOP_CARIJOS_1.jpg', '/imgs/obras/coop_Drogaria_carijos/DROGARIA_COOP_CARIJOS_2.jpg', '/imgs/obras/coop_Drogaria_carijos/DROGARIA_COOP_CARIJOS_3.jpg', '/imgs/obras/coop_Drogaria_carijos/DROGARIA_COOP_CARIJOS_4.jpg'])">    Mais imagens</button>
                     </div>
                     <div class="col-md-4 order-md-1">
                         <div class="imagem-exibicao">
@@ -158,37 +149,35 @@
         <div class="container block">
             <div class="row col-12 justify-content-around">
                 <div class="col-md-7 order-md-1">
-                    <h1 class="row titulo"></h1>
+                    <h1 class="row titulo">Condominio Campo Di Fiore</h1>
                     <p class="row subtitulo">Aqui voce explica qual serviço voce prestou, onde foi consturida, como,
                         terceiros...</p>
                     <button class="custom-button"
-                        onclick="openModal(['/imgs/escritorio.jpg', '/imgs/escritorio.jpg', '/imgs/escritorio.jpg'])">Abrir
-                        Carrossel 1</button>
+                        onclick="openModal(['/imgs/obras/Gal_Flores/COND CAMPO DI FIORE RUA GAL FLORES_1.jpg', '/imgs/obras/Gal_Flores/COND CAMPO DI FIORE RUA GAL FLORES_2.jpg', '/imgs/obras/Gal_Flores/COND CAMPO DI FIORE RUA GAL FLORES_3.jpg', '/imgs/obras/Gal_Flores/COND CAMPO DI FIORE RUA GAL FLORES_4.jpg', '/imgs/obras/Gal_Flores/COND CAMPO DI FIORE RUA GAL FLORES_5.jpg', '/imgs/obras/Gal_Flores/COND CAMPO DI FIORE RUA GAL FLORES_6.jpg', '/imgs/obras/Gal_Flores/COND CAMPO DI FIORE RUA GAL FLORES_7.jpg', '/imgs/obras/Gal_Flores/COND CAMPO DI FIORE RUA GAL FLORES_8.jpg', '/imgs/obras/Gal_Flores/COND CAMPO DI FIORE RUA GAL FLORES_9.jpg', '/imgs/obras/Gal_Flores/COND CAMPO DI FIORE RUA GAL FLORES_10.jpg', '/imgs/obras/Gal_Flores/COND CAMPO DI FIORE RUA GAL FLORES_11.jpg', '/imgs/obras/Gal_Flores/COND CAMPO DI FIORE RUA GAL FLORES_12.jpg'])">Mais imagens</button>
                 </div>
                 <div class="col-md-4 order-md-2">
                     <div class="imagem-exibicao">
-                        <img src="/imgs/obras/coop_Drogaria_carijos/DROGARIA_COOP_CARIJOS_4.jpg"
+                        <img src="/imgs/obras/Gal_Flores/COND CAMPO DI FIORE RUA GAL FLORES_2.jpg"
                             alt="Imagem 1">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="divisor">
-        <div class="container" id="servico-4">
+    <div class="divisor" id="servico-4">
+        <div class="container">
             <div class="container block">
                 <div class="row col-12 justify-content-around">
                     <div class="col-md-7 order-md-2">
-                        <h1 class="row titulo"></h1>
+                        <h1 class="row titulo">Galpão</h1>
                         <p class="row subtitulo">Aqui voce explica qual serviço voce prestou, onde foi consturida, como,
                             terceiros...</p>
                         <button class="custom-button"
-                            onclick="openModal(['/imgs/escritorio.jpg', '/imgs/escritorio.jpg', '/imgs/escritorio.jpg'])">Abrir
-                            Carrossel 1</button>
+                            onclick="openModal(['/imgs/obras/galpao_av_dr_erasmo/GALPAO_AV_DR_ERASMO_1.jpg', '/imgs/obras/galpao_av_dr_erasmo/GALPAO_AV_DR_ERASMO_2.jpg', '/imgs/obras/galpao_av_dr_erasmo/GALPAO_AV_DR_ERASMO_3.jpg', '/imgs/obras/galpao_av_dr_erasmo/GALPAO_AV_DR_ERASMO_4.jpg', '/imgs/obras/galpao_av_dr_erasmo/GALPAO_AV_DR_ERASMO_5.jpg', '/imgs/obras/galpao_av_dr_erasmo/GALPAO_AV_DR_ERASMO_6.jpg'])">    Mais imagens</button>
                     </div>
                     <div class="col-md-4 order-md-1">
                         <div class="imagem-exibicao">
-                            <img src="/imgs/obras/coop_Drogaria_carijos/DROGARIA_COOP_CARIJOS_4.jpg"
+                            <img src="/imgs/obras/galpao_av_dr_erasmo/GALPAO_AV_DR_ERASMO_1.jpg"
                                 alt="Imagem 1">
                         </div>
                     </div>
@@ -200,17 +189,37 @@
         <div class="container block">
             <div class="row col-12 justify-content-around">
                 <div class="col-md-7 order-md-1">
-                    <h1 class="row titulo"></h1>
+                    <h1 class="row titulo">Horti Fruti</h1>
                     <p class="row subtitulo">Aqui voce explica qual serviço voce prestou, onde foi consturida, como,
                         terceiros...</p>
                     <button class="custom-button"
-                        onclick="openModal(['/imgs/escritorio.jpg', '/imgs/escritorio.jpg', '/imgs/escritorio.jpg'])">Abrir
-                        Carrossel 1</button>
+                        onclick="openModal(['/imgs/obras/horti_fruti_dionisio/HORTI_FRUTI_DIONISIO_1.jpg'])">Mais imagens</button>
                 </div>
                 <div class="col-md-4 order-md-2">
                     <div class="imagem-exibicao">
-                        <img src="/imgs/obras/coop_Drogaria_carijos/DROGARIA_COOP_CARIJOS_4.jpg"
+                        <img src="/imgs/obras/horti_fruti_dionisio/HORTI_FRUTI_DIONISIO_1.jpg"
                             alt="Imagem 1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="divisor" id="servico-6">
+        <div class="container">
+            <div class="container block">
+                <div class="row col-12 justify-content-around">
+                    <div class="col-md-7 order-md-2">
+                        <h1 class="row titulo">Galpão</h1>
+                        <p class="row subtitulo">Aqui voce explica qual serviço voce prestou, onde foi consturida, como,
+                            terceiros...</p>
+                        <button class="custom-button"
+                            onclick="openModal(['/imgs/obras/galpao_av_dr_erasmo/GALPAO_AV_DR_ERASMO_1.jpg', '/imgs/obras/galpao_av_dr_erasmo/GALPAO_AV_DR_ERASMO_2.jpg', '/imgs/obras/galpao_av_dr_erasmo/GALPAO_AV_DR_ERASMO_3.jpg', '/imgs/obras/galpao_av_dr_erasmo/GALPAO_AV_DR_ERASMO_4.jpg', '/imgs/obras/galpao_av_dr_erasmo/GALPAO_AV_DR_ERASMO_5.jpg', '/imgs/obras/galpao_av_dr_erasmo/GALPAO_AV_DR_ERASMO_6.jpg'])">    Mais imagens</button>
+                    </div>
+                    <div class="col-md-4 order-md-1">
+                        <div class="imagem-exibicao">
+                            <img src="/imgs/obras/galpao_av_dr_erasmo/GALPAO_AV_DR_ERASMO_1.jpg"
+                                alt="Imagem 1">
+                        </div>
                     </div>
                 </div>
             </div>
