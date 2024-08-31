@@ -26,10 +26,7 @@ function openModal(images) {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-            autoplay: {
-                delay: 5000, // Define o tempo entre slides
-                disableOnInteraction: false,
-            },
+           
         });
     }
 
