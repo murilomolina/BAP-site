@@ -48,7 +48,7 @@ export default async function Page() {
               </div>
               <div className="text-center overflow-hidden">
                 <h2 className="font-bold text-blue-900 relative">
-                  Procuração
+                  Calculos
                 </h2>
               </div>
             </Link>
