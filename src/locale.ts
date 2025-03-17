@@ -1,4 +1,4 @@
-import { MiddlewareConfig, NextRequest, NextResponse } from "next/server";
+// import { MiddlewareConfig, NextRequest, NextResponse } from "next/server";
 
 export const locales = ["en-US", "pt-BR", "es-ES"];
 

@@ -2,7 +2,6 @@ import { providerMap, signIn } from "@/auth";
 import { Button } from "@/ui/button";
 import { AuthError } from "next-auth";
 import { redirect } from "next/navigation";
-import Image from "next/image";
 
 // export function SignIn() {
 

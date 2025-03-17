@@ -2,7 +2,6 @@ import NextAuth from "next-auth";
 // import MicrosoftEntraID from "next-auth/providers/microsoft-entra-id";
 import GoogleProvider from "next-auth/providers/google";
 import type { Provider } from "next-auth/providers";
-import { NextRequest, NextResponse } from "next/server";
 import { locales, getPathnameLocale, getHeaderLocale } from "./locale";
 
 
@@ -47,7 +46,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   callbacks: {
     authorized({ auth, request: { nextUrl, headers } }) {
      
-      var locale = ""
+      let locale = ""
       const { pathname } = nextUrl;
 
       const pathnameHasLocale = locales.some(
