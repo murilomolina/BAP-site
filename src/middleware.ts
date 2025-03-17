@@ -5,7 +5,7 @@ import { locales, getPathnameLocale, getHeaderLocale } from "./locale";
 
 export default auth(({ auth, nextUrl, headers }) => {
   
-  var locale = ""
+  let locale = ""
   const { pathname } = nextUrl;
 
   const pathnameHasLocale = locales.some(
