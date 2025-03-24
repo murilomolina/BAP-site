@@ -1,0 +1,59 @@
+'use client'
+import React from 'react';
+import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+
+const Projects = () => {
+  const projects = [
+    { id: 1, imageSrc: '/assets/images/obras/boulangerie/imagem-1.jpg', title: 'Projeto 1', description: 'Descrição do Projeto 1' },
+    { id: 2, imageSrc: '/assets/images/obras/boulangerie/imagem-1.jpg', title: 'Projeto 2', description: 'Descrição do Projeto 2' },
+    { id: 3, imageSrc: '/assets/images/obras/boulangerie/imagem-1.jpg', title: 'Projeto 3', description: 'Descrição do Projeto 3' },
+    { id: 4, imageSrc: '/assets/images/obras/boulangerie/imagem-1.jpg', title: 'Projeto 4', description: 'Descrição do Projeto 4' },
+  ];
+
+  return (
+    <section id="projetos" className="py-16 px-6 md:px-16 bg-gray-900 text-white">
+      <div className="max-w-screen-xl mx-auto text-center mb-12">
+        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Nossos Projetos</h2>
+        <p className="text-lg sm:text-xl text-gray-300">Confira alguns dos nossos projetos mais recentes e incríveis.</p>
+      </div>
+
+      {/* Swiper Carrossel */}
+      <Swiper
+        spaceBetween={20}
+        slidesPerView={1}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
+        className="w-full"
+      >
+        {projects.map((project) => (
+          <SwiperSlide key={project.id}>
+            <div className="relative rounded-lg overflow-hidden shadow-lg transition-all transform hover:scale-105">
+              <Image
+                src={project.imageSrc}
+                alt={project.title}
+                width={500}
+                height={300}
+                objectFit="cover"
+                className="w-full h-full"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent text-white p-4">
+                <h3 className="text-xl font-semibold">{project.title}</h3>
+                <p className="text-sm">{project.description}</p>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
+  );
+};
+
+export default Projects;
