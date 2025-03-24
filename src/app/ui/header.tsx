@@ -22,7 +22,7 @@ export default function Header() {
             className="h-12 w-auto rounded-sm shadow-sm"
           />
           <p className="hidden sm:block text-xl font-bold text-blue-900 dark:text-white tracking-wide drop-shadow-sm">
-            Barone Assessoria & Projetos
+            Barone Assessoria e Projetos
           </p>
         </div>
         

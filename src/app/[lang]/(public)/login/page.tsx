@@ -17,27 +17,27 @@ export default async function Page() {
   // const sP = await searchParams;
 
   return (
-    <main className="min-h-screen flex flex-col justify-center items-center p-8 bg-gradient-to-br from-blue-200 to-blue-500 dark:from-gray-800 dark:to-gray-600">
-      {/* Main Container with padding */}
-      <div className="flex flex-col justify-center items-center space-y-12">
-        {/* Logo container with space between */}
-        <div className="max-w-full px-4">
+    <main className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-100 to-blue-700 dark:from-gray-900 ">
+      {/* Main Container */}
+      <div className="flex flex-col justify-center items-center p-8 space-y-12 bg-white bg-opacity-80 rounded-xl shadow-2xl w-full max-w-md">
+        {/* Logo container */}
+        <div className="mb-6">
           <Image
-            className=""
-            src="/assets/images/next.svg"
-            alt="Next"
-            width={160}
-            height={160}
+            className="shadow-lg"
+            src="/assets/images/BAP.jpg"
+            alt="BAP"
+            width={100}
+            height={100}
           />
         </div>
 
-        {/* Title container with more spacing */}
-        <div className="flex flex-col items-center justify-center space-y-6">
-          <h1
-            className={`text-4xl sm:text-5xl font-medium tracking-wider ${noto_serif.className} antialiased`}
-          >
-            Login Template
-          </h1>
+        {/* Title */}
+        <h1
+          className={`text-4xl sm:text-5xl font-bold text-gray-800 ${noto_serif.className} tracking-wide`}
+        >
+          Login
+        </h1>
+
 
           {/* Button and Sign-in section with increased spacing */}
           {/* <div className="space-y-5">
@@ -71,6 +71,8 @@ export default async function Page() {
             ))}
           </div> */}
           <SignIn />
+          <div className="text-sm text-gray-500 text-center mt-6">
+          <p>By signing in, you agree to our Terms of Service and Privacy Policy.</p>
         </div>
       </div>
     </main>
