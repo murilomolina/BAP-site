@@ -31,6 +31,8 @@ const providers: Provider[] = [
   
 ];
 
+const allowedEmails = process.env.ALLOWEDEMAILS?.split(",") || [];
+
 export const providerMap = providers
   .map((provider) => {
     if (typeof provider === "function") {
@@ -44,6 +46,17 @@ export const providerMap = providers
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   callbacks: {
+    async signIn({ user, account }) {
+      if (account?.provider === "google") {
+        // Verify e-mail
+        if (!user.email || !allowedEmails.includes(user.email)) {
+          console.log(`Acesso negado para: ${user.email ?? "Usuário sem e-mail"}`);
+          return false;
+        }
+      }
+
+      return true; // login allowed
+    },
     authorized({ auth, request: { nextUrl, headers } }) {
      
       let locale = ""
@@ -89,5 +102,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   providers,
   pages: {
     signIn: `/login`,
+    error: `/error`
   },
 });
