@@ -1,4 +1,5 @@
 'use client';
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
 export default function AuthErrorPage() {
@@ -19,18 +20,18 @@ export default function AuthErrorPage() {
         <p className="text-lg text-gray-300">{errorMessage}</p>
 
         <div className="mt-6 flex flex-col gap-3">
-          <a
+          <Link
             href="/login"
             className="px-5 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 transition-all duration-200 shadow-md text-white font-medium"
           >
             🔑 Tentar Novamente
-          </a>
-          <a
+          </Link>
+          <Link
             href="/"
             className="px-5 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 transition-all duration-200 shadow-md text-white font-medium"
           >
             🏠 Voltar à Página Inicial
-          </a>
+          </Link>
         </div>
       </div>
     </div>

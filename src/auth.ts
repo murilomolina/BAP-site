@@ -46,7 +46,7 @@ export const providerMap = providers
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   callbacks: {
-    async signIn({ user, account, profile }) {
+    async signIn({ user, account }) {
       if (account?.provider === "google") {
         // Verify e-mail
         if (!user.email || !allowedEmails.includes(user.email)) {
