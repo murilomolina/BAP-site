@@ -19,13 +19,11 @@ import Link from "next/link";
 export default async function UserButton() {
   const session = await auth();
   if (!session?.user) return (<Link
-    className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-    href={"/api/auth/signin"}
-    // target="_blank"
-    // rel="noopener noreferrer"
-  >
-    Login
-  </Link>)
+  className="flex items-center justify-center gap-2 rounded-full  border-transparent bg-gradient-to-r from-blue-600 to-blue-800 text-white font-bold text-sm sm:text-base h-10 sm:h-12 px-5 sm:px-6 shadow-md transition-all duration-300 hover:brightness-110 hover:shadow-lg dark:from-blue-500 dark:to-blue-700"
+  href="/api/auth/signin"
+>
+  Login
+</Link>)
   
   // <SignIn />;
   return (
@@ -52,7 +50,7 @@ export default async function UserButton() {
         <DropdownMenuContent className="w-56" align="end" forceMount>
           <DropdownMenuLabel className="font-normal">
             <div className="flex flex-col space-y-1">
-              <p className="text-sm font-medium leading-none">
+              <p className="text-sm font-bold leading-none">
                 {session.user.name}
               </p>
               <p className="text-muted-foreground text-xs leading-none">

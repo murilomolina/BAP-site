@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
 const links = [
-  { name: "Home", href: "/dashboard/", icon: Icons.HomeIcon },
+  { name: "Dashboard", href: "/dashboard/", icon: Icons.Squares2X2Icon },
   { name: "Apps", href: "/dashboard/apps", icon: Icons.CubeIcon },
   { name: "Settings", href: "/dashboard/settings", icon: Icons.Cog6ToothIcon },
   // { name: "External Link", href: "https://BAP.br", icon: Icons.DocumentIcon, external: true, blank: true },
@@ -53,57 +53,57 @@ const links = [
 //   );
 // }
 
-// export default function NavLinks() {
-//   const pathname = usePathname();
-//   return (
-//     <>
-//       {links.map((link) => {
-//         const LinkIcon = link.icon;
-//         return (
-//           <Link
-//             key={link.name}
-//             href={link.href}
-//             className={clsx(
-//               "flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-800 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3",
-//               {
-//                 "bg-gray-800 text-blue-600": pathname === link.href,
-//               }
-//             )}
-//           >
-//             <LinkIcon className="w-6" />
-//             <p className="hidden md:block">{link.name}</p>
-//           </Link>
-//         );
-//       })}
-//     </>
-//   );
-// }
-
 export default function NavLinks() {
   const pathname = usePathname();
-
   return (
-    <nav className="flex flex-col space-y-2 md:space-y-1 w-full">
+    <>
       {links.map((link) => {
         const LinkIcon = link.icon;
-
         return (
           <Link
             key={link.name}
             href={link.href}
             className={clsx(
-              "flex h-12 w-full items-center justify-center gap-2 rounded-lg px-4 text-sm font-medium transition-all duration-300 ease-in-out",
-              "hover:bg-blue-100 hover:text-blue-700 dark:hover:bg-gray-700 dark:hover:text-white",
-              pathname === link.href
-                ? "bg-blue-600 text-white shadow-md dark:bg-blue-500"
-                : "bg-gray-800 text-gray-300 dark:bg-gray-900 dark:text-gray-400"
+              "flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-800 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3",
+              {
+                "bg-gray-800 text-blue-600": pathname === link.href,
+              }
             )}
           >
-            <LinkIcon className="w-6 h-6 text-current" />
-            <span className="hidden md:block">{link.name}</span>
+            <LinkIcon className="w-6" />
+            <p className="hidden md:block">{link.name}</p>
           </Link>
         );
       })}
-    </nav>
+    </>
   );
 }
+
+// export default function NavLinks() {
+//   const pathname = usePathname();
+
+//   return (
+//     <nav className="flex flex-col space-y-2 md:space-y-1 w-full">
+//       {links.map((link) => {
+//         const LinkIcon = link.icon;
+
+//         return (
+//           <Link
+//             key={link.name}
+//             href={link.href}
+//             className={clsx(
+//               "flex h-12 w-full items-center justify-center gap-2 rounded-lg px-4 text-sm font-medium transition-all duration-300 ease-in-out",
+//               "hover:bg-blue-100 hover:text-blue-700 dark:hover:bg-gray-700 dark:hover:text-white",
+//               pathname === link.href
+//                 ? "bg-blue-600 text-white shadow-md dark:bg-blue-500"
+//                 : "bg-gray-800 text-gray-300 dark:bg-gray-900 dark:text-gray-400"
+//             )}
+//           >
+//             <LinkIcon className="w-6 h-6 text-current" />
+//             <span className="hidden md:block">{link.name}</span>
+//           </Link>
+//         );
+//       })}
+//     </nav>
+//   );
+// }

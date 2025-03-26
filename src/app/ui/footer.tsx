@@ -24,7 +24,7 @@ const Footer = () => {
           <Link href="#home" className="text-gray-300 hover:text-blue-500 transition-all duration-300">Home</Link>
           <Link href="#about" className="text-gray-300 hover:text-blue-500 transition-all duration-300">Sobre Nós</Link>
           <Link href="#projetos" className="text-gray-300 hover:text-blue-500 transition-all duration-300">Projetos</Link>
-          <Link href="#contato" className="text-gray-300 hover:text-blue-500 transition-all duration-300">Contato</Link>
+          {/* <Link href="#contato" className="text-gray-300 hover:text-blue-500 transition-all duration-300">Contato</Link> */}
         </div>
 
         {/* Social Media Icons */}
