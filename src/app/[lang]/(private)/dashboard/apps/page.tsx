@@ -1,58 +1,48 @@
 import Image from "next/image";
-import Head from 'next/head';
 import Link from "next/link";
 import { auth } from "@/auth";
 
 export default async function Page() {
   const session = await auth();
-  if (!session?.user) return null
+  if (!session?.user) return null;
 
   return (
     <>
-      <Head>
-        <title>BAP Dashboard</title>
-      </Head>
-      <div className="flex min-h-screen items-center justify-center sm:p-6 md:p-8">
-        <div className="rounded-xl bg-white shadow-xl p-6 sm:p-8 w-full sm:w-3/4 md:w-2/3 animate-fade-in">
-          <div className="mb-8">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-800">
-              <span className="font-medium">{session?.user.name}</span>.
+      <div className="flex max-h-screen items-center justify-center transition-all">
+        <div className="rounded-2xl bg-white dark:bg-gray-800 shadow-2xl p-8 sm:p-10 w-full max-w-lg lg:max-w-2xl animate-fade-in">
+          {/* Header */}
+          <div className="text-center mb-10">
+            <h1 className="text-3xl sm:text-4xl font-semibold text-gray-800 dark:text-white">
+              Olá, <span className="font-bold text-blue-600 dark:text-blue-400">{session?.user.name}</span>!
             </h1>
-            <p className="text-lg sm:text-xl text-gray-500 mt-3">
-              Selecione o módulo que deseja acessar.
+            <p className="text-lg text-gray-500 dark:text-gray-300 mt-2">
+              Escolha um aplicativo para continuar.
             </p>
           </div>
 
           {/* Grid container for cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 sm:gap-8 mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+            {/* Card 1 */}
             <Link
-              href="/dashboard/calculos"
-              className="flex flex-col items-center justify-between bg-gradient-to-tl from-blue-100 to-blue-200 text-white rounded-lg shadow-lg hover:opacity-90 transition-all p-6 space-y-4 group overflow-hidden"
+              href="/dashboard/apps/calculo-inclinacao"
+              className="group flex flex-col items-center justify-between bg-gradient-to-tl from-blue-400 to-blue-700 text-white rounded-xl shadow-lg hover:scale-105 transition-all p-6 space-y-4 backdrop-blur-md"
             >
-              <div className="w-full max-w-xs mx-auto flex justify-center">
-                <Image className="object-contain h-24 sm:h-28 lg:h-32" src='/assets/images/next.svg' alt="BAP" width={150} height={150} />
+              <div className="w-full flex justify-center">
+                <Image className="object-contain h-20 sm:h-24 lg:h-28" src='/assets/images/BAP.jpg' alt="BAP" width={100} height={100} />
               </div>
-              <div className="text-center overflow-hidden">
-                <h2 className="font-bold text-blue-900 relative">
-                  Calculo de Inclinação
-                </h2>
-              </div>
+              <h2 className="text-lg font-semibold tracking-wide text-white">Cálculo de Inclinação</h2>
             </Link>
 
+            {/* Card 2 */}
             <Link
-              href="/dashboard/procuracao"
-              className="flex flex-col items-center justify-between bg-gradient-to-tl from-indigo-100 to-indigo-200 text-white rounded-lg shadow-lg hover:opacity-90 transition-all p-6 space-y-4 group overflow-hidden"
+              href="/dashboard/apps/procuracao"
+              className="group flex flex-col items-center justify-between bg-gradient-to-tl from-indigo-400 to-indigo-700 text-white rounded-xl shadow-lg hover:scale-105 transition-all p-6 space-y-4 backdrop-blur-md"
             >
-              <div className="w-full max-w-xs mx-auto flex justify-center">
-                <Image className="object-contain h-24 sm:h-28 lg:h-32" src='/assets/images/next.svg' alt="BAP" width={150} height={150} />
+              <div className="w-full flex justify-center">
+                <Image className="object-contain h-20 sm:h-24 lg:h-28" src='/assets/images/BAP.jpg' alt="BAP" width={100} height={100} />
               </div>
-              <div className="text-center overflow-hidden">
-                <h2 className="font-bold text-blue-900 relative">
-                  Calculos
-                </h2>
-              </div>
+              <h2 className="text-lg font-semibold tracking-wide text-white">Procuração</h2>
             </Link>
-
           </div>
         </div>
       </div>
