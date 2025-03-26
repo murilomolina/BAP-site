@@ -5,6 +5,7 @@ import Image from "next/image";
 // import { AuthError } from "next-auth";
 import { noto_serif } from "../../../ui/fonts";
 import { SignIn } from "@/app/ui/auth/signin-button";
+import Link from "next/link";
 
 export default async function Page() {
 //   {
@@ -17,7 +18,15 @@ export default async function Page() {
   // const sP = await searchParams;
 
   return (
-    <main className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-100 to-blue-700 dark:from-gray-900 ">
+    <main className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-100 to-blue-700 dark:from-gray-900 relative">
+      {/* Botão de voltar */}
+      <Link
+        href="/"
+        className="absolute top-5 left-5 flex items-center space-x-2 text-gray-800 hover:text-gray-600 dark:text-white dark:hover:text-gray-400 transition duration-200"
+      >
+        <span className="text-lg font-medium">Voltar</span>
+      </Link>
+
       {/* Main Container */}
       <div className="flex flex-col justify-center items-center p-8 space-y-12 bg-white bg-opacity-80 rounded-xl shadow-2xl w-full max-w-md">
         {/* Logo container */}
@@ -70,9 +79,9 @@ export default async function Page() {
               </form>
             ))}
           </div> */}
-          <SignIn />
-          <div className="text-sm text-gray-500 text-center mt-6">
-          <p>By signing in, you agree to our Terms of Service and Privacy Policy.</p>
+        <SignIn />
+        <div className="text-sm text-gray-500 text-center mt-6">
+          <p>Ao entrar, você concorda com nossos Termos de Serviço e Política de Privacidade.</p>
         </div>
       </div>
     </main>
