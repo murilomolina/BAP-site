@@ -20,10 +20,9 @@ export default function ImageCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Effect to track window width
   useEffect(() => {
-    const checkScreenSize = () => setIsMobile(window.innerWidth < 768 || window.innerHeight < 800);
-    checkScreenSize(); // Run once on mount
+    const checkScreenSize = () => setIsMobile(window.innerWidth < 768);
+    checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
@@ -40,7 +39,7 @@ export default function ImageCarousel() {
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={10}
         slidesPerView={1}
-        navigation={isMobile ? false : true}
+        navigation={!isMobile}
         pagination={{ clickable: true }}
         autoplay={{ delay: 8000, disableOnInteraction: false }}
         loop
@@ -50,48 +49,28 @@ export default function ImageCarousel() {
         {images.map((src, index) => (
           <SwiperSlide key={index}>
             <div className="relative w-full h-screen">
-
-              <div className="absolute inset-0 flex items-center justify-between mb-4 px-6 md:px-12 z-10">
-                {/* Left Section */}
+              <div className="absolute inset-0 flex items-center justify-center md:justify-start text-white p-6 md:p-12 z-10">
                 {!isMobile ? (
-                  <div className="flex flex-col items-start justify-center text-white text-left md:w-1/2 space-y-6 p-6 md:p-10">
-                    {/* Main Info Box */}
-                    <div className="bg-gradient-to-r from-black/90 via-black/60 to-black/30 p-8 md:p-12 rounded-3xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-3xl">
-                      <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-5 tracking-wide leading-tight text-white drop-shadow-lg">
-                        {currentImage.split('/obras/')[1]?.split('/')[0] === "boulangerie"
-                          ? "Padaria Boulangerie"
-                          : currentImage.split('/obras/')[1]?.split('/')[0] === "gen_flores"
-                            ? "Coronel Flores"
-                            : currentImage.split('/obras/')[1]?.split('/')[0] === "drogaria_sp"
-                              ? "Drogaria São Paulo"
-                              : "Outro Projeto"}
-                      </h1>
-
-                      <p className="text-lg md:text-2xl mb-6 leading-relaxed text-gray-300 drop-shadow-md">
-                        {currentImage.split('/obras/')[1]?.split('/')[0] === "boulangerie"
-                          ? "Rua das Caneleiras 668"
-                          : currentImage.split('/obras/')[1]?.split('/')[0] === "gen_flores"
-                            ? "Rua Coronel Flores 445"
-                            : currentImage.split('/obras/')[1]?.split('/')[0] === "drogaria_sp"
-                              ? "Avenida Portugal 337"
-                              : "Outro Projeto"}
-                      </p>
-
-                      <div className="flex flex-wrap gap-4">
-                        <Link href={currentImage} prefetch={false}>
-                          <button className="bg-white text-black px-4 md:px-6 py-1 md:py-2 rounded-full text-md font-semibold hover:bg-gray-200 transition-all duration-300 transform hover:scale-105">
-                            Saiba Mais
-                          </button>
-                        </Link>
-
-                        <Link
+                  <div className="bg-black/60 p-6 md:p-10 rounded-3xl shadow-lg">
+                    <h1 className="text-2xl md:text-5xl font-bold mb-4">
+                      {currentImage.includes('boulangerie') ? 'Padaria Boulangerie' :
+                        currentImage.includes('gen_flores') ? 'Coronel Flores' :
+                        currentImage.includes('drogaria_sp') ? 'Drogaria São Paulo' : 'Outro Projeto'}
+                    </h1>
+                    <p className="text-lg md:text-2xl mb-6">
+                      {currentImage.includes('boulangerie') ? 'Rua das Caneleiras 668' :
+                        currentImage.includes('gen_flores') ? 'Rua Coronel Flores 445' :
+                        currentImage.includes('drogaria_sp') ? 'Avenida Portugal 337' : 'Outro Projeto'}
+                    </p>
+                    <div className="flex flex-wrap gap-4">
+                      <Link href={currentImage} prefetch={false}>
+                        <button className="bg-white text-black px-4 py-2 rounded-full font-semibold hover:bg-gray-200">Saiba Mais</button>
+                      </Link>
+                      <Link
                           href={
-                            currentImage.split('/obras/')[1]?.split('/')[0] === "boulangerie"
-                              ? "https://maps.app.goo.gl/MQ5Uvp4iPTrh5wih6"
-                              : currentImage.split('/obras/')[1]?.split('/')[0] === "gen_flores"
-                                ? "https://maps.app.goo.gl/RenKRquy9r7CLWkS9"
-                                : currentImage.split('/obras/')[1]?.split('/')[0] === "drogaria_sp"
-                                  ? "https://maps.app.goo.gl/BcW2WKSrJjEt1spV6"
+                            currentImage.includes('boulangerie') ? "https://maps.app.goo.gl/MQ5Uvp4iPTrh5wih6"
+                              : currentImage.includes('gen_flores') ? "https://maps.app.goo.gl/RenKRquy9r7CLWkS9"
+                                : currentImage.includes('drogaria_sp') ?"https://maps.app.goo.gl/BcW2WKSrJjEt1spV6"
                                   : "#"
                           }
                           target="_blank"
@@ -101,37 +80,17 @@ export default function ImageCarousel() {
                             Google Maps
                           </button>
                         </Link>
-                      </div>
-                    </div>
-
-                    {/* Bottom Section with Small Text and Button */}
-                    <div className="absolute bottom-8 left-0 right-0 flex justify-center text-white px-4">
-                      <div className="bg-black/50 backdrop-blur-md p-6 rounded-2xl text-center shadow-lg">
-                        <p className="text-base md:text-md mb-4 font-semibold">
-                          Quer saber mais sobre nossos projetos?
-                        </p>
-                        <Link href="#about">
-                          <button className="bg-white text-black px-6 py-3 rounded-full text-base md:text-md font-semibold hover:bg-gray-300 transition-all duration-300 transform hover:scale-105">
-                            Conheça mais!
-                          </button>
+                        <Link href="#about" prefetch={false}>
+                          <button className="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-600">Conheça mais!</button>
                         </Link>
-                      </div>
                     </div>
                   </div>
-
                 ) : (
-                  <div className="flex flex-col items-center justify-center text-center p-8 md:p-12 rounded-xl shadow-lg">
-                    <p className="text-white text-lg sm:text-xl md:text-2xl font-bold mb-4">
-                      BARONE ASSESSORIA E PROJETOS
-                    </p>
-                    <p className="text-white text-sm sm:text-lg md:text-xl font-light mb-6 max-w-3xl">
-                      Sempre providenciando as melhores soluções para seu imóvel. Estamos aqui para transformar seu espaço com excelência e inovação.
-                    </p>
-
+                  <div className="text-center p-6 bg-black/50 backdrop-blur-md rounded-xl">
+                    <h2 className="text-xl font-bold mb-2">BARONE ASSESSORIA E PROJETOS</h2>
+                    <p className="text-sm mb-4">Providenciando as melhores soluções para seu imóvel.</p>
                     <Link href="#about">
-                      <button className="bg-white text-black px-8 py-3 rounded-full text-md font-semibold hover:bg-gray-200 transition-all duration-300 transform hover:scale-105">
-                        Saiba Mais!
-                      </button>
+                      <button className="bg-white text-black px-6 py-2 rounded-full font-semibold hover:bg-gray-200">Saiba Mais!</button>
                     </Link>
                   </div>
                 )}
