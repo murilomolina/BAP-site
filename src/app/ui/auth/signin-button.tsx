@@ -36,7 +36,7 @@ import { redirect } from "next/navigation";
           <Button
             {...props}
             className="space-x-5 rounded-full bg-white px-6 py-3 sm:px-7 sm:py-4 transition duration-150 ease-in hover:bg-neutral-300"
-            style={{ boxShadow: "8px 8px 25px rgba(0,0,0,.2)" }}
+            style={{ boxShadow: "8px 8px 25px rgba(0, 0, 0, 0.59)" }}
           >
             <span className="text-center text-black text-[0.825rem] uppercase tracking-wider">
               ENTRAR COM GOOGLE
