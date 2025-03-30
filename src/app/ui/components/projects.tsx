@@ -1,19 +1,32 @@
 'use client'
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/navigation';
 
 const Projects = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => setIsMobile(window.innerWidth < 768);
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
   const projects = [
     { id: 1, imageSrc: '/assets/images/obras/boulangerie/imagem-1.jpg', title: 'Projeto 1', description: 'Descrição do Projeto 1' },
     { id: 2, imageSrc: '/assets/images/obras/boulangerie/imagem-1.jpg', title: 'Projeto 2', description: 'Descrição do Projeto 2' },
     { id: 3, imageSrc: '/assets/images/obras/boulangerie/imagem-1.jpg', title: 'Projeto 3', description: 'Descrição do Projeto 3' },
     { id: 4, imageSrc: '/assets/images/obras/boulangerie/imagem-1.jpg', title: 'Projeto 4', description: 'Descrição do Projeto 4' },
+    { id: 5, imageSrc: '/assets/images/obras/boulangerie/imagem-1.jpg', title: 'Projeto 5', description: 'Descrição do Projeto 5' },
+    { id: 6, imageSrc: '/assets/images/obras/boulangerie/imagem-1.jpg', title: 'Projeto 6', description: 'Descrição do Projeto 6' },
   ];
 
   return (
-    <section id="projetos" className="py-16 px-6 md:px-16 bg-gray-900 text-white">
+    <section id="projetos" className="py-16 px-6 md:px-16 bg-gray-900 text-white relative">
       <div className="max-w-screen-xl mx-auto text-center mb-12">
         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Nossos Projetos</h2>
         <p className="text-lg sm:text-xl text-gray-300">Confira alguns dos nossos projetos mais recentes e incríveis.</p>
@@ -23,6 +36,9 @@ const Projects = () => {
       <Swiper
         spaceBetween={20}
         slidesPerView={1}
+        navigation={!isMobile}
+        loop={true}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
         breakpoints={{
           640: {
             slidesPerView: 2,
@@ -32,6 +48,7 @@ const Projects = () => {
           },
         }}
         className="w-full"
+        modules={[Navigation, Autoplay]}
       >
         {projects.map((project) => (
           <SwiperSlide key={project.id}>
@@ -52,6 +69,11 @@ const Projects = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {/* Indicador de rotação aprimorado */}
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex items-center space-x-2 text-gray-300 animate-bounce">
+        <span className="text-sm font-semibold">Deslize para ver mais</span>
+      </div>
     </section>
   );
 };
