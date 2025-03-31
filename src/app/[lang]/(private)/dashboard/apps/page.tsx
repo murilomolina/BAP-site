@@ -9,13 +9,13 @@ export default async function Page() {
   return (
     <>
       <div className="flex max-h-screen items-center justify-center transition-all">
-        <div className="rounded-2xl bg-white dark:bg-gray-800 shadow-2xl p-8 sm:p-10 w-full max-w-lg lg:max-w-2xl animate-fade-in">
+        <div className="rounded-2xl bg-gray-800 shadow-2xl p-8 sm:p-10 w-full max-w-lg lg:max-w-2xl animate-fade-in">
           {/* Header */}
           <div className="text-center mb-10">
-            <h1 className="text-3xl sm:text-4xl font-semibold text-gray-800 dark:text-white">
-              Olá, <span className="font-bold text-blue-600 dark:text-blue-400">{session?.user.name}</span>!
+            <h1 className="text-3xl sm:text-4xl font-semibold text-white">
+              Olá, <span className="font-bold text-blue-400">{session?.user.name}</span>!
             </h1>
-            <p className="text-lg text-gray-500 dark:text-gray-300 mt-2">
+            <p className="text-lg text-gray-300 mt-2">
               Escolha um aplicativo para continuar.
             </p>
           </div>

@@ -20,7 +20,7 @@ import { SignOut } from "@/ui/auth/signout-button";
 
 export default async function UserButton() {
   const session = await auth();
-  if (!session?.user) return null 
+  if (!session?.user) return null
   // (<Link
   //   className="flex items-center justify-center gap-2 rounded-full  border-transparent bg-gradient-to-r from-blue-600 to-blue-800 text-white font-bold text-sm sm:text-base h-auto py-1 sm:h-8 px-3 sm:px-4 shadow-md transition-all duration-300 hover:brightness-110 hover:shadow-lg dark:from-blue-500 dark:to-blue-700"
   //   href="/api/auth/signin"
@@ -31,7 +31,7 @@ export default async function UserButton() {
   // <SignIn />;
   return (
     <div className="flex items-center gap-2">
-      <span className="hidden text-sm sm:inline-flex">
+      <span className="hidden text-sm lg:block text-white font-semibold">
         {session.user.email}
       </span>
       <DropdownMenu>
@@ -51,7 +51,7 @@ export default async function UserButton() {
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-56" align="end" forceMount>
           <DropdownMenuLabel className="font-normal">
-            <div className="flex flex-col space-y-1">
+            <div className="flex flex-col space-y-1 text-white">
               <p className="text-sm font-bold leading-none">
                 {session.user.name}
               </p>

@@ -18,11 +18,11 @@ export default async function Page() {
   // const sP = await searchParams;
 
   return (
-    <main className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-100 to-blue-700 dark:from-gray-900 relative">
+    <main className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-100 to-blue-700 from-gray-900 relative">
       {/* Botão de voltar */}
       <Link
         href="/"
-        className="absolute top-5 left-5 flex items-center space-x-2 text-gray-800 hover:text-gray-600 dark:text-white dark:hover:text-gray-400 transition duration-200"
+        className="absolute top-5 left-5 flex items-center space-x-2 hover:text-gray-600 text-white hover:text-gray-400 transition duration-200"
       >
         <span className="text-lg font-medium">Voltar</span>
       </Link>

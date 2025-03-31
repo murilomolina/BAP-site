@@ -3,7 +3,7 @@ import { SidenavDesktop, SidenavMobile } from "@/ui/dashboard/sidenav";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <div className="bg-gray-900 text-white max-h-screen">
       <Header />
       <div className="flex h-screen flex-col md:flex-row md:overflow-hidden pt-16">
         
@@ -21,8 +21,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="md:hidden flex h-screen flex-col md:flex-row md:overflow-hidden pt-16 pb-16">
           <SidenavMobile />
         </div>
-
       </div>
-    </>
+    </div>
   );
 }
