@@ -10,7 +10,7 @@ export default function MenuButton() {
   return (
     <>
       <button onClick={() => setMenuOpen(true)} aria-label="Abrir Menu">
-        <Bars3BottomLeftIcon className="w-8 text-blue-700 dark:text-blue-300 cursor-pointer hover:text-blue-500 transition duration-300" />
+        <Bars3BottomLeftIcon className="w-8 text-blue-300 cursor-pointer hover:text-blue-500 transition duration-300" />
       </button>
 
       {/* Sidebar */}

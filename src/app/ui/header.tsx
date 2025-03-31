@@ -4,11 +4,11 @@ import MenuButtonWrapper from "@/ui/components/menubutton-wrapper";
 
 export default function Header() {
   return (
-    <header className="fixed inset-x-0 top-0 z-10 border-b border-blue-900 shadow-lg bg-white/70 dark:bg-blue-900/90 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-10 border-b border-blue-900 shadow-lg bg-blue-900/90 backdrop-blur-md">
       <div className="relative flex h-16 items-center px-6 md:px-10">
 
         {/* Botão da sidebar */}
-        <div className="w-8 text-blue-700 dark:text-blue-300 cursor-pointer hover:text-blue-500 transition duration-300">
+        <div className="w-8 text-blue-300 cursor-pointer hover:text-blue-500 transition duration-300">
           <MenuButtonWrapper />
         </div>
 
@@ -23,7 +23,7 @@ export default function Header() {
             quality={100}
             className="h-12 w-auto rounded-sm shadow-sm"
           />
-          <p className="hidden sm:block text-xl font-bold text-blue-900 dark:text-white tracking-wide drop-shadow-sm">
+          <p className="hidden sm:block text-xl font-bold text-white tracking-wide drop-shadow-sm">
             Barone Assessoria e Projetos
           </p>
         </div>
