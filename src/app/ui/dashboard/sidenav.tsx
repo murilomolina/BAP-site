@@ -3,7 +3,7 @@ import NavLinks from "./nav-links";
 
 export function SidenavMobile() {
   return (
-    <div className="fixed inset-x-0 bottom-0 flex flex-row justify-between space-x-2 p-3 bg-black">
+    <div className="fixed inset-x-0 bottom-0 flex flex-row justify-between space-x-2 p-3">
       <NavLinks />
     </div>
   );
