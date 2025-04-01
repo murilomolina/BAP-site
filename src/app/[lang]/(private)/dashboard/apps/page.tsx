@@ -43,6 +43,16 @@ export default async function Page() {
               </div>
               <h2 className="text-lg font-semibold tracking-wide text-white">Procuração</h2>
             </Link>
+            {/* Card 3 */}
+            <Link
+              href="/dashboard/apps/bf"
+              className="group flex flex-col items-center justify-between bg-gradient-to-tl from-blue-600 to-green-800 text-white rounded-xl shadow-lg hover:scale-105 transition-all p-6 space-y-4 backdrop-blur-md"
+            >
+              <div className="w-full flex justify-center">
+                <Image className="object-contain h-20 sm:h-24 lg:h-28" src='/assets/images/BAP.jpg' alt="BAP" width={100} height={100} />
+              </div>
+              <h2 className="text-lg font-semibold tracking-wide text-white">Beneficio Financeiro</h2>
+            </Link>
           </div>
         </div>
       </div>

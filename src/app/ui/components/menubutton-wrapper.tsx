@@ -15,7 +15,7 @@ export default function MenuButtonWrapper() {
         className="p-1 rounded-md text-blue-700 hover:text-blue-500 transition"
         aria-label="Página Inicial"
       >
-        <HomeIcon className="w-6 h-6" />
+        <HomeIcon className="w-6 h-6 text-white" />
       </Link>
     );
   }
