@@ -143,7 +143,7 @@ export default function  CalculoBF() {
         <div className="flex items-center space-x-4 mt-6 relative">
           {/* Botão de Download - Visível somente em telas grandes (desktop) */}
           <Link
-          href="https://drive.google.com/uc?export=download&id=18qHU_AEwiXTyVctVSewaZECAEA-IcJg3"
+          href="https://drive.google.com/uc?export=download&id=1uaWGQAMF5whYqL5app8x88HiKjglHIxC"
           target="_blank"  // Abre o link em uma nova aba
           rel="noopener noreferrer"  // Segurança extra para links externos
           download
