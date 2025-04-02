@@ -3,25 +3,26 @@ import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import type { Provider } from "next-auth/providers";
 import { locales, getPathnameLocale, getHeaderLocale } from "./locale";
+import { supabase } from "@/lib/supabaseClient";
 
+async function getUserByEmail(email: string) {
+  try {
+    const { data, error } = await supabase
+      .from("user")
+      .select("*")
+      .eq("email", email)
 
-// async function getUser(email: string): Promise<User | undefined> {
-//   try {
-//     const user = await sql<User>`SELECT * FROM users WHERE email=${email}`;
-//     return user.rows[0];
-//   } catch (error) {
-//     console.error('Failed to fetch user:', error);
-//     throw new Error('Failed to fetch user.');
-//   }
-// }
+    if (error) {
+      console.error("Erro ao buscar usuário:", error);
+      return null;
+    }
 
-// const providers: Provider[] = [
-//   MicrosoftEntraID({
-//     clientId: process.env.AUTH_MICROSOFT_ENTRA_ID_ID,
-//     clientSecret: process.env.AUTH_MICROSOFT_ENTRA_ID_SECRET,
-//     issuer: process.env.AUTH_MICROSOFT_ENTRA_ID_ISSUER,
-//   }),
-// ];
+    return data;
+  } catch (err) {
+    console.error("Erro inesperado ao buscar usuário:", err);
+    return null;
+  }
+}
 
 const providers: Provider[] = [
   GoogleProvider({
@@ -30,8 +31,6 @@ const providers: Provider[] = [
   })
   
 ];
-
-const allowedEmails = process.env.ALLOWEDEMAILS?.split(",") || [];
 
 export const providerMap = providers
   .map((provider) => {
@@ -47,16 +46,27 @@ export const providerMap = providers
 export const { handlers, auth, signIn, signOut } = NextAuth({
   callbacks: {
     async signIn({ user, account }) {
+      console.log("Iniciando login para:", user.email);
+    
       if (account?.provider === "google") {
-        // Verify e-mail
-        if (!user.email || !allowedEmails.includes(user.email)) {
-          console.log(`Acesso negado para: ${user.email ?? "Usuário sem e-mail"}`);
+        if (!user.email) {
+          console.log("Usuário sem e-mail, acesso negado.");
           return false;
         }
+    
+        const userData = await getUserByEmail(user.email);
+    
+        if (!userData) {
+          console.log(`Acesso negado para: ${user.email}, usuário não encontrado no banco.`);
+          return false;
+        }
+    
+        console.log(`Usuário autorizado: ${user.email}`);
       }
-
-      return true; // login allowed
+    
+      return true;
     },
+    
     authorized({ auth, request: { nextUrl, headers } }) {
      
       let locale = ""
