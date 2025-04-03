@@ -13,8 +13,8 @@ const AboutUs = () => {
             <Image 
               src={"/assets/images/obras/boulangerie/imagem-1.jpg"} 
               alt="About Us" 
-              layout="fill" 
-              objectFit="cover" 
+              fill 
+              // objectFit="cover" 
               className="object-cover"
             />
           </div>
