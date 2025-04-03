@@ -7,16 +7,17 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState, useCallback, useMemo, useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { Swiper as SwiperType } from 'swiper';
 
-const images = [
-  '/assets/images/obras/boulangerie/imagem-1.jpg',
-  '/assets/images/obras/gen_flores/imagem-5.jpg',
-  '/assets/images/obras/drogaria_sp/imagem-6.jpg',
-];
+interface Project {
+  image: string;
+  title: string;
+  address: string;
+  mapLink: string;
+}
 
-export default function ImageCarousel() {
+export default function ImageCarousel({ projects }: { projects: Project[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -31,7 +32,7 @@ export default function ImageCarousel() {
     setCurrentIndex(swiper.realIndex);
   }, []);
 
-  const currentImage = useMemo(() => images[currentIndex], [currentIndex]);
+  const currentProject = projects[currentIndex]; // Pegamos o projeto diretamente do array
 
   return (
     <div className="w-full h-screen">
@@ -46,11 +47,11 @@ export default function ImageCarousel() {
         className="w-full h-full"
         onSlideChange={handleSlideChange}
       >
-        {images.map((src, index) => (
+        {projects.map((project, index) => (
           <SwiperSlide key={index}>
             <div className="relative w-full h-screen flex items-center justify-center">
               <Image
-                src={src}
+                src={project.image}
                 alt={`Slide ${index + 1}`}
                 fill
                 className="object-cover brightness-75"
@@ -59,31 +60,21 @@ export default function ImageCarousel() {
               <div className="absolute inset-0 flex flex-col justify-center text-center text-white p-6 md:p-12 z-10">
                 <div className={`bg-black/50 p-6 md:p-10 rounded-3xl shadow-lg max-w-xl ${isMobile ? 'text-sm' : 'text-lg'}` }>
                   <h1 className={`font-extrabold mb-4 ${isMobile ? 'text-lg' : 'text-3xl md:text-5xl'}`}>
-                    {isMobile ? 'Barone Assessoria e Projetos' : currentImage.includes('boulangerie') ? 'Padaria Boulangerie' :
-                      currentImage.includes('gen_flores') ? 'Coronel Flores' :
-                        currentImage.includes('drogaria_sp') ? 'Drogaria São Paulo' : 'Outro Projeto'}
+                    {isMobile ? 'Barone Assessoria e Projetos' : currentProject.title}
                   </h1>
                   <p className={`mb-6 font-light ${isMobile ? 'text-xs' : 'text-lg md:text-2xl'}`}>
-                    {isMobile ? 'Conheça mais sobre nossos projetos e localizações.' :
-                      currentImage.includes('boulangerie') ? 'Rua das Caneleiras 668' :
-                        currentImage.includes('gen_flores') ? 'Rua Coronel Flores 445' :
-                          currentImage.includes('drogaria_sp') ? 'Avenida Portugal 337' : 'Outro Projeto'}
+                    {isMobile ? 'Conheça mais sobre nossos projetos e localizações.' : currentProject.address}
                   </p>
                   <div className="flex flex-wrap gap-4 justify-center">
                     {!isMobile ? (
                       <>
-                        <Link href={currentImage} prefetch={false}>
+                        <Link href={currentProject.title} prefetch={false}> {/* i have to find a better way to go to project info */}
                           <button className="bg-white text-black px-5 py-3 rounded-full font-semibold hover:bg-gray-200 transition-all duration-300">
                             Saiba Mais
                           </button>
                         </Link>
                         <Link
-                          href={
-                            currentImage.includes('boulangerie') ? "https://maps.app.goo.gl/MQ5Uvp4iPTrh5wih6"
-                              : currentImage.includes('gen_flores') ? "https://maps.app.goo.gl/RenKRquy9r7CLWkS9"
-                                : currentImage.includes('drogaria_sp') ? "https://maps.app.goo.gl/BcW2WKSrJjEt1spV6"
-                                  : "#"
-                          }
+                          href={ currentProject.mapLink }
                           target="_blank"
                           prefetch={false}
                         >
