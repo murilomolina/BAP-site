@@ -1,9 +1,13 @@
+'use server'
 import ImageCarousel from "@/ui/components/image-carousel";
 import AboutUs from "../../../ui/components/about-us";
 import Footer from "@/app/ui/footer";
 import Projects from "@/app/ui/components/projects";
+import { getExposedProjects } from "../../../../../public/assets/images/projetos/exposedProjects";
 
-export default function Home() {
+export default async function Home() {
+  const projects = await getExposedProjects(); // Carrega os projetos no servidor
+
   return (
     <div className="min-h-screen flex flex-col bg-black">
       {/* Main Content */}
@@ -11,7 +15,7 @@ export default function Home() {
 
         {/* Image Carousel */}
         <section id="#home">
-          <ImageCarousel />
+          <ImageCarousel projects={projects} />
         </section>
 
         {/* About Us Section */}

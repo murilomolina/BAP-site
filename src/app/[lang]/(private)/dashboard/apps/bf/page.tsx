@@ -72,7 +72,7 @@ export default function  CalculoBF() {
   };
 
   return (
-    <div className="flex flex-col items-center space-y-6 p-6">
+    <div className="flex flex-col items-center space-y-6 ">
       <div className="w-full max-w-lg p-6 bg-gray-800 text-white rounded-lg shadow-lg">
         <h2 className="text-xl font-bold text-center mb-4">Cálculo de BF</h2>
 
@@ -116,16 +116,16 @@ export default function  CalculoBF() {
           />
         </div>
 
-        <div className="flex justify-between mb-4">
+        <div className="flex justify-between mb-6">
           <button
             onClick={calculate}
-            className="bg-green-600 hover:bg-green-500 text-white font-semibold py-2 px-4 rounded-lg transition"
+            className="bg-green-600 hover:bg-green-500 text-white font-semibold py-2 px-4 rounded transition"
           >
             Calcular
           </button>
           <button
             onClick={clearFields}
-            className="bg-red-600 hover:bg-red-500 text-white font-semibold py-2 px-4 rounded-lg transition"
+            className="bg-red-600 hover:bg-red-500 text-white font-semibold py-2 px-4 rounded transition"
           >
             Limpar Campos
           </button>
@@ -143,7 +143,7 @@ export default function  CalculoBF() {
         <div className="flex items-center space-x-4 mt-6 relative">
           {/* Botão de Download - Visível somente em telas grandes (desktop) */}
           <Link
-          href="https://drive.google.com/uc?export=download&id=1uaWGQAMF5whYqL5app8x88HiKjglHIxC"
+          href="https://oihictxzwf0pwyra.public.blob.vercel-storage.com/bap-apps/bfOFC-v2.0.exe"
           target="_blank"  // Abre o link em uma nova aba
           rel="noopener noreferrer"  // Segurança extra para links externos
           download

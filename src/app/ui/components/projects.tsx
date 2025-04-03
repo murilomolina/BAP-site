@@ -58,8 +58,7 @@ const Projects = () => {
                 alt={project.title}
                 width={500}
                 height={300}
-                objectFit="cover"
-                className="w-full h-full"
+                className="object-cover w-full h-full"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent text-white p-4">
                 <h3 className="text-xl font-semibold">{project.title}</h3>
