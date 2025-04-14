@@ -7,13 +7,13 @@ export default function Header() {
     <header className="fixed inset-x-0 top-0 z-10 border-b border-blue-900 shadow-lg bg-blue-900/90 backdrop-blur-md">
       <div className="relative flex h-16 items-center px-6 md:px-10">
 
-        {/* Botão da sidebar */}
-        <div className="w-8 text-blue-300 cursor-pointer hover:text-blue-500 transition duration-300">
+        {/* Botão da sidebar - esquerda em mobile, visível só em mobile */}
+        <div className="block md:hidden text-blue-300 cursor-pointer hover:text-blue-500 transition duration-300">
           <MenuButtonWrapper />
         </div>
 
-        {/* Logo centralizado */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center space-x-4">
+        {/* Logo - centralizado em mobile, alinhado à esquerda em desktop */}
+        <div className="absolute inset-0 flex justify-center items-center md:static md:justify-start md:items-center md:space-x-4">
           <Image
             priority
             src="/assets/images/BAP.jpg"
@@ -28,8 +28,11 @@ export default function Header() {
           </p>
         </div>
 
-        {/* Botão usuário alinhado à direita */}
-        <div className="flex flex-none items-center ml-auto">
+        {/* Direita - MenuButton (desktop) + UserButton */}
+        <div className="flex items-center space-x-4 ml-auto">
+          <div className="hidden md:block text-blue-300 cursor-pointer hover:text-blue-500 transition duration-300">
+            <MenuButtonWrapper />
+          </div>
           <UserButton />
         </div>
 
