@@ -11,7 +11,7 @@ const AboutUs = () => {
           {/* Image Section */}
           <div className="w-full md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden shadow-xl transition-all duration-500 transform hover:scale-105">
             <Image 
-              src={"/assets/images/obras/boulangerie/imagem-1.jpg"} 
+              src={"https://oihictxzwf0pwyra.public.blob.vercel-storage.com/bap-images/coop_Dom_Pedro_unidade_2/COOP%20DOM%20PEDRO%20I_UNIDADE%202_FOTO%202.jpg"} 
               alt="About Us" 
               fill 
               // objectFit="cover" 
@@ -58,10 +58,10 @@ const AboutUs = () => {
           {/* Image Section */}
           <div className="w-full md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden shadow-xl transition-all duration-500 transform hover:scale-105">
             <Image 
-              src={"/assets/images/obras/boulangerie/imagem-1.jpg"} 
+              src={"https://oihictxzwf0pwyra.public.blob.vercel-storage.com/bap-images/coop_Dom_Pedro_unidade_2/COOP%20DOM%20PEDRO%20I_UNIDADE%202_FOTO%202.jpg"} 
               alt="About Us" 
-              layout="fill" 
-              objectFit="cover" 
+              fill 
+              // objectFit="cover" 
               className="object-cover"
             />
           </div>
