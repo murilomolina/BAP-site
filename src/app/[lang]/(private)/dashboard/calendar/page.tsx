@@ -56,7 +56,7 @@ export default function CollaborativeCalendar() {
   };
 
   // Editar ou excluir evento
-  const handleSelectEvent = (event: any) => {
+  const handleSelectEvent = (event: unknown) => {
     const customEvent = event as CustomEvent;
 
     if (customEvent.user.id !== currentUser.id) {
@@ -102,7 +102,7 @@ export default function CollaborativeCalendar() {
   };
 
   const eventStyleGetter = (
-    event: any,
+    event: unknown,
     start: Date,
     end: Date,
     isSelected: boolean
@@ -116,11 +116,14 @@ export default function CollaborativeCalendar() {
         color: "white",
         paddingLeft: "6px",
         cursor: "pointer",
+        start,
+        end,
+        isSelected,
       },
     };
   };
 
-  const CustomEventComponent = ({ event }: { event: any }) => {
+  const CustomEventComponent = ({ event }: { event: unknown }) => {
     const customEvent = event as CustomEvent;
     return (
       <div>
@@ -129,7 +132,7 @@ export default function CollaborativeCalendar() {
       </div>
     );
   };
-
+  
   return (
     <div className="p-4">
       <Calendar
@@ -143,7 +146,7 @@ export default function CollaborativeCalendar() {
         style={{ height: 600 }}
         eventPropGetter={eventStyleGetter}
         components={{
-          event: CustomEventComponent as any,
+            event: CustomEventComponent          
         }}        
       />
     </div>
