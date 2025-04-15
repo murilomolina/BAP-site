@@ -31,9 +31,9 @@ export default async function UserButton() {
   // <SignIn />;
   return (
     <div className="flex items-center gap-2">
-      <span className="hidden text-sm lg:block text-white font-semibold">
+      {/* <span className="text-sm text-white font-semibold">
         {session.user.email}
-      </span>
+      </span> */}
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" className="relative h-8 w-8 rounded-full">

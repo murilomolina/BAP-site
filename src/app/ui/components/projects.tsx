@@ -17,12 +17,12 @@ const Projects = () => {
   }, []);
 
   const projects = [
-    { id: 1, imageSrc: '/assets/images/obras/boulangerie/imagem-1.jpg', title: 'Projeto 1', description: 'Descrição do Projeto 1' },
-    { id: 2, imageSrc: '/assets/images/obras/boulangerie/imagem-1.jpg', title: 'Projeto 2', description: 'Descrição do Projeto 2' },
-    { id: 3, imageSrc: '/assets/images/obras/boulangerie/imagem-1.jpg', title: 'Projeto 3', description: 'Descrição do Projeto 3' },
-    { id: 4, imageSrc: '/assets/images/obras/boulangerie/imagem-1.jpg', title: 'Projeto 4', description: 'Descrição do Projeto 4' },
-    { id: 5, imageSrc: '/assets/images/obras/boulangerie/imagem-1.jpg', title: 'Projeto 5', description: 'Descrição do Projeto 5' },
-    { id: 6, imageSrc: '/assets/images/obras/boulangerie/imagem-1.jpg', title: 'Projeto 6', description: 'Descrição do Projeto 6' },
+    { id: 1, imageSrc: 'https://oihictxzwf0pwyra.public.blob.vercel-storage.com/bap-images/coop_Dom_Pedro_unidade_2/COOP%20DOM%20PEDRO%20I_UNIDADE%202_FOTO%202.jpg', title: 'Projeto 1', description: 'Descrição do Projeto 1' },
+    { id: 2, imageSrc: 'https://oihictxzwf0pwyra.public.blob.vercel-storage.com/bap-images/coop_Dom_Pedro_unidade_2/COOP%20DOM%20PEDRO%20I_UNIDADE%202_FOTO%202.jpg', title: 'Projeto 2', description: 'Descrição do Projeto 2' },
+    { id: 3, imageSrc: 'https://oihictxzwf0pwyra.public.blob.vercel-storage.com/bap-images/coop_Dom_Pedro_unidade_2/COOP%20DOM%20PEDRO%20I_UNIDADE%202_FOTO%202.jpg', title: 'Projeto 3', description: 'Descrição do Projeto 3' },
+    { id: 4, imageSrc: 'https://oihictxzwf0pwyra.public.blob.vercel-storage.com/bap-images/coop_Dom_Pedro_unidade_2/COOP%20DOM%20PEDRO%20I_UNIDADE%202_FOTO%202.jpg', title: 'Projeto 4', description: 'Descrição do Projeto 4' },
+    { id: 5, imageSrc: 'https://oihictxzwf0pwyra.public.blob.vercel-storage.com/bap-images/coop_Dom_Pedro_unidade_2/COOP%20DOM%20PEDRO%20I_UNIDADE%202_FOTO%202.jpg', title: 'Projeto 5', description: 'Descrição do Projeto 5' },
+    { id: 6, imageSrc: 'https://oihictxzwf0pwyra.public.blob.vercel-storage.com/bap-images/coop_Dom_Pedro_unidade_2/COOP%20DOM%20PEDRO%20I_UNIDADE%202_FOTO%202.jpg', title: 'Projeto 6', description: 'Descrição do Projeto 6' },
   ];
 
   return (
