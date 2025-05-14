@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Bars3BottomLeftIcon } from "@heroicons/react/24/outline";
 import Sidebar from "@/ui/components/sidebar"; // ajuste o caminho se necessário
-import { Link } from "lucide-react";
+import Link  from "next/link";
 
 export default function MenuButton() {
   const [menuOpen, setMenuOpen] = useState(false);
