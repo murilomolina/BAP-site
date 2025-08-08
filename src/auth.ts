@@ -10,14 +10,14 @@ async function getUserByEmail(email: string) {
     const { data, error } = await supabase
       .from("user")
       .select("*")
-      .eq("email", email)
+      .eq("email", email);
 
     if (error) {
       console.error("Erro ao buscar usuário:", error);
       return null;
     }
 
-    return data;
+    return data.length > 0 ? data[0] : null;
   } catch (err) {
     console.error("Erro inesperado ao buscar usuário:", err);
     return null;
